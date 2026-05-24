@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy｜Blank &amp; Bounds</title>
+  <meta name="description" content="Blank &amp; BoundsのPrivacy Policy。個人情報の取り扱いについて。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { DEFAULT: '#1A2B3C', dark: '#0D151F', light: '#2A3F54' }, gold: { DEFAULT: '#C5A059', dark: '#A8863F' }, cream: '#F9F8F3', link: '#1A2B3C' }, fontFamily: { sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'], display: ['"Playfair Display"', 'serif'], accent: ['"Inter"', '"Manrope"', 'sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .geo-pattern {
+      background-image:
+        linear-gradient(135deg, transparent 48%, rgba(197, 160, 89, 0.12) 49%, rgba(197, 160, 89, 0.12) 51%, transparent 52%),
+        linear-gradient(45deg, transparent 48%, rgba(197, 160, 89, 0.08) 49%, rgba(197, 160, 89, 0.08) 51%, transparent 52%);
+      background-size: 80px 80px, 120px 120px;
+    }
+    .input-error { border-color: #B91C1C !important; box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15); }
+    .input-error:focus { outline-color: #B91C1C; }
+  </style>
+</head>
+<body class="bg-cream text-navy font-sans text-sm md:text-base antialiased">
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">
+    メインコンテンツへスキップ
+  </a>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform">
+        <span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">登録手順</a></li>
+        <li><a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">Contact</a></li>
+        <li><a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline" aria-current="page">Privacy Policy</a></li>
+        <li><a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">概要書面</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden w-10 h-10 border-2 border-navy/20 rounded-md" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-white">Top</a></li>
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md hover:bg-white">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md hover:bg-white">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md hover:bg-white">登録手順</a></li>
+        <li><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded-md bg-white font-semibold">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded-md hover:bg-white">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="max-w-3xl mx-auto px-4 py-12 md:py-16 prose-policy pt-20 md:pt-24">
+    <h1 class="font-display text-3xl text-navy-dark mb-8">Privacy Policy</h1>
+    <p class="text-navy leading-relaxed mb-8">Blank &amp; Bounds（以下「当サイト」）は、お客様の個人情報の保護を重要な責務と考え、以下のとおりPrivacy Policyを定めます。</p>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">1. 収集する情報</h2>
+    <p class="text-navy leading-relaxed">当サイトのお問い合わせ・資料請求フォーム等を通じて、お名前、メールアドレスなどをご提供いただく場合があります。</p></section>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">2. 利用目的</h2>
+    <ul class="list-disc pl-5 space-y-2 text-navy">
+      <li>お問い合わせへの回答、ゲストパス、招待URLの送付</li>
+      <li>サービスに関するご案内（同意いただいた場合）</li>
+      <li>当サイトの改善・分析</li>
+    </ul></section>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">3. 第三者提供</h2>
+    <p class="text-navy leading-relaxed">法令に基づく場合を除き、本人の同意なく個人情報を第三者に提供することはありません。</p></section>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">4. 安全管理</h2>
+    <p class="text-navy leading-relaxed">個人情報の漏えい・滅失・毀損の防止のため、適切な安全管理措置を講じます。</p></section>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">5. 改定</h2>
+    <p class="text-navy leading-relaxed">本ポリシーは、必要に応じて改定することがあります。改定後は当ページに掲載した時点で効力を生じます。</p></section>
+
+    <section class="mb-8"><h2 class="text-lg font-bold text-navy-dark mb-3">6. 免責事項</h2>
+    <p class="text-navy leading-relaxed">当サイトは、MWR Life Independent Lifestyle Ambassador により運営されています。</p>
+    <p class="text-navy leading-relaxed">MWR Lifeの公式サイトではありません。</p>
+    <p class="text-navy leading-relaxed">掲載内容は情報提供を目的としており、サービス内容・特典・報酬構造等は変更される場合があります。最新情報は公式サイトをご確認ください。</p></section>
+
+    <p class="text-sm text-navy/70 mt-12">制定日：2026年5月19日<br>Blank &amp; Bounds</p>
+  </main>
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 justify-center flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

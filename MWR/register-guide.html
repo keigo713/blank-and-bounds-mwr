@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登録手順｜Blank &amp; Bounds</title>
+  <meta name="description" content="MWR Lifeの会員登録から初期設定、ライフスタートまで。招待リンク・支払い方法・紹介報酬の受取設定を日本語で解説します。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { DEFAULT: '#1A2B3C', dark: '#0D151F', light: '#2A3F54' }, gold: { DEFAULT: '#C5A059', dark: '#A8863F' }, cream: '#F9F8F3', link: '#1A2B3C', tip: '#B45309' }, fontFamily: { sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'], display: ['"Playfair Display"', 'serif'], accent: ['"Inter"', '"Manrope"', 'sans-serif'] } } } };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .geo-pattern { background-image: linear-gradient(135deg, transparent 48%, rgba(197,160,89,.12) 49%, rgba(197,160,89,.12) 51%, transparent 52%); background-size: 80px 80px; }
+  </style>
+</head>
+<body class="bg-cream text-navy font-sans text-sm md:text-base antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">メインコンテンツへスキップ</a>
+
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group"><img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform"><span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span></a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-gold-dark font-semibold underline underline-offset-4" aria-current="page">登録手順</a></li>
+        <li><a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">Contact</a></li>
+        <li><a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">Privacy Policy</a></li>
+        <li><a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">概要書面</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden w-10 h-10 rounded-md border-2 border-navy/20" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-white">Top</a></li>
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md hover:bg-white">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md hover:bg-white">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md bg-white font-semibold">登録手順</a></li>
+        <li><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded hover:bg-white">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded hover:bg-white">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="pt-20 md:pt-24 bg-white">
+
+    <!-- HERO -->
+    <section class="geo-pattern py-16 md:py-32 border-b border-gold/20 bg-cream/50" aria-labelledby="page-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-8">Registration Guide</p>
+        <h1 id="page-title" class="font-display text-3xl md:text-6xl text-navy-dark mb-10 max-w-4xl mx-auto italic">登録手順</h1>
+        <p class="text-navy/70 max-w-2xl mx-auto leading-relaxed text-lg font-light">
+          新しい生き方への入り口は、ここから始まります。
+          招待URLの受け取りから、アカウントの有効化まで。
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 space-y-16">
+
+      <!-- ===== STEP 01: 会員登録 ===== -->
+      <section id="step-register" aria-labelledby="step-register-heading">
+        <header class="flex items-center gap-4 mb-8">
+          <span class="flex-shrink-0 w-12 h-12 rounded-full bg-navy text-white font-bold text-lg flex items-center justify-center" aria-hidden="true">01</span>
+          <div>
+            <h2 id="step-register-heading" class="font-display text-2xl md:text-3xl text-navy-dark">会員登録</h2>
+            <p class="text-navy/80 text-sm mt-1">招待リンクから登録</p>
+          </div>
+        </header>
+
+        <div class="prose-flow space-y-6 max-w-prose text-navy leading-relaxed">
+          <p>パートナーから届いた<strong class="text-navy-dark">招待リンク</strong>を開き、公式の登録画面に進みます。はじめての方は、画面の指示にしたがってアカウントを作成してください。</p>
+          <ul class="space-y-3" role="list">
+            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i><span><strong class="text-navy-dark">お名前・住所</strong>はパスポート表記どおり<strong>ローマ字（英字）</strong>で入力</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i><span><strong class="text-navy-dark">メールアドレス</strong>と<strong class="text-navy-dark">登録用パスワード</strong>を設定（ログインに使用）</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-gold mt-1 flex-shrink-0"></i><span><strong class="text-navy-dark">支払い方法</strong>は<strong>クレジットカード</strong>、または<strong>USDT・USDC</strong>（暗号資産）から選択</span></li>
+          </ul>
+        </div>
+
+        <!-- メンバーシップ選択（添付画像） -->
+        <figure class="figure-hq mt-10 rounded-xl overflow-hidden border border-navy/10 shadow-lg bg-white" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+          <img
+            src="assets/plan-selection.png"
+            alt="MWR Life 登録画面 — ライフスタイルアンバサダー、エリートトラベルアドバンテージ、ターボ追加オプションの選択"
+            class="img-hq img-screenshot-wide"
+            width="600"
+            height="800"
+            loading="eager"
+            decoding="async"
+          >
+          <figcaption class="p-4 text-sm text-navy/80 border-t border-navy/10 leading-relaxed">
+            <strong>メンバーシップの選択：</strong>エリートトラベルアドバンテージ™（月額＋初期費用）を選び、必要に応じてターボ追加オプションを検討。<br>
+            ＊ライフアンバサダー項目は必須
+          </figcaption>
+        </figure>
+
+        <!-- 入力フォーム詳細（既存ガイド画像） -->
+        <h3 class="font-display text-xl text-navy-dark mt-12 mb-4 text-center">入力フォームの日本語ガイド（全て英字で入力）</h3>
+        <figure class="figure-hq rounded-xl overflow-hidden border border-navy/10 shadow-lg bg-white" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+          <img
+            src="assets/form-guide.png"
+            alt="入力フォームの日本語ガイド"
+            class="img-hq img-screenshot-wide"
+            width="600"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+      </section>
+
+      <!-- 矢印 -->
+      <div class="flex justify-center text-gold" aria-hidden="true">
+        <i class="fa-solid fa-arrow-down text-3xl"></i>
+      </div>
+
+      <!-- ===== STEP 02: ログイン ===== -->
+      <section id="step-setup" aria-labelledby="step-setup-heading">
+        <header class="flex items-center gap-4 mb-8">
+          <span class="flex-shrink-0 w-12 h-12 rounded-full bg-navy text-white font-bold text-lg flex items-center justify-center" aria-hidden="true">02</span>
+          <div>
+            <h2 id="step-setup-heading" class="font-display text-2xl md:text-3xl text-navy-dark">ログイン</h2>
+            <p class="text-navy/80 text-sm mt-1">下記3つにそれぞれログイン</p>
+          </div>
+        </header>
+
+        <div class="max-w-prose space-y-6 text-navy leading-relaxed">
+          <div class="p-6 bg-white rounded-xl border border-gold/30 shadow-sm">
+            <h3 class="font-semibold text-navy-dark mb-4 flex items-center gap-2">🟠ログイン（管理サイト）</h3>
+            <p class="text-sm text-navy/70 mb-2"><a href="https://www.mwrlife.com/Home/Login" target="_blank" rel="noopener noreferrer" class="text-gold-dark hover:underline">https://www.mwrlife.com/Home/Login</a></p>
+            <p class="text-sm text-navy/70">会費や組織図なのどのアカウントになります<br>（USDCであればこちらから出金できます）</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-gold/30 shadow-sm">
+            <h3 class="font-semibold text-navy-dark mb-4 flex items-center gap-2">🟠Travel Advantage（MWR会員予約サイト）</h3>
+            <p class="text-sm text-navy/70 mb-2"><a href="https://www.traveladvantage.com/login" target="_blank" rel="noopener noreferrer" class="text-gold-dark hover:underline">https://www.traveladvantage.com/login</a></p>
+            <p class="text-sm text-navy/70">航空券、ホテル等の旅行サイト</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-xl border border-gold/30 shadow-sm">
+            <h3 class="font-semibold text-navy-dark mb-4 flex items-center gap-2">🟠i-payout（報酬受取Wallet）</h3>
+            <p class="text-sm text-navy/70 mb-2"><a href="https://mwrlife.globalewallet.com/MemberLogin.aspx" target="_blank" rel="noopener noreferrer" class="text-gold-dark hover:underline">https://mwrlife.globalewallet.com/MemberLogin.aspx</a></p>
+            <p class="text-sm text-navy/70">紹介報酬等の管理画面<br>BTCやデビットカードへのチャージ</p>
+          </div>
+
+          <p class="text-sm text-navy/70">全てのアカウントにアプリとブラウザがあります</p>
+
+          <div class="p-6 bg-cream/30 rounded-xl border border-gold/20">
+            <h3 class="font-semibold text-navy-dark mb-2 flex items-center gap-2">⚠️ i-payoutについて ⚠️</h3>
+            <p class="text-sm text-navy/70">MWR入会時に登録したメールアドレス宛に、ログイン用のIDとパスワードが送られてきますので、そちらでログインをして下さい。<br>こちらは報酬の出金先をUSDCにした場合は使いません。</p>
+          </div>
+
+          <div class="p-6 bg-cream/30 rounded-xl border border-gold/20">
+            <h3 class="font-semibold text-navy-dark mb-2 flex items-center gap-2">⚠️報酬の出金先設定について⚠️</h3>
+            <p class="text-sm text-navy/70">初期設定では、KYCが必要なi-payoutになっています。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex justify-center text-gold" aria-hidden="true">
+        <i class="fa-solid fa-arrow-down text-3xl"></i>
+      </div>
+
+      <!-- ===== STEP 03: 完了 ===== -->
+      <section id="step-start" aria-labelledby="step-start-heading">
+        <header class="flex items-center gap-4 mb-8">
+          <span class="flex-shrink-0 w-12 h-12 rounded-full bg-navy text-white font-bold text-lg flex items-center justify-center" aria-hidden="true">03</span>
+          <div>
+            <h2 id="step-start-heading" class="font-display text-2xl md:text-3xl text-navy-dark">完了</h2>
+            <p class="text-navy/80 text-sm mt-1">すべての機能をフル体験</p>
+          </div>
+        </header>
+
+        <div class="max-w-prose space-y-6 text-navy leading-relaxed">
+          <p>いよいよ<strong class="text-navy-dark">Travel Advantage</strong>の世界へ。ターボ会員なら、ポイント2倍積立・特別宿泊料金・Life Experiences®など、<strong>すべての機能をフルで体験</strong>できます。</p>
+          <p>まずは実際に<strong class="text-navy-dark">旅行の予約</strong>を試し、他の予約サイトと比べて<strong class="text-navy-dark">旅行費用</strong>と<strong class="text-navy-dark">使い勝手</strong>をじっくり検証してみてください。数字と体感の両方で「自分ごと化」できるのが、このステップの目的です。</p>
+
+          <ul class="space-y-3 p-6 bg-cream rounded-xl border-l-4 border-gold" role="list">
+            <li class="flex gap-2"><i class="fa-solid fa-plane text-gold"></i>航空券・ホテルを1件予約して価格を比較</li>
+            <li class="flex gap-2"><i class="fa-solid fa-calendar-check text-gold"></i>月会費・ポイント積立の仕組みを確認</li>
+          </ul>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FINAL CTA -->
+    <section class="py-32 bg-navy text-white text-center">
+      <div class="max-w-xl mx-auto px-4">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold mb-8">Ready?</p>
+        <h2 class="font-display text-3xl md:text-5xl mb-12 italic">Your Journey Starts Here.</h2>
+        <a href="index.html#contact" class="inline-flex items-center justify-center px-12 py-5 bg-gold text-navy-dark font-bold tracking-[0.2em] uppercase text-xs hover:bg-gold-light transition-all">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* 高級感を演出するためのアニメーション */
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 20s ease-out infinite alternate;
+}
+
+.reveal-text {
+  animation: textReveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* セクション余白の増加とタイポグラフィの調整 */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+p {
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* スクリーンショット・インフォ画像のシャープ表示と画質向上 */
+main img[src*="assets/"],
+.img-hq {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* 画像にわずかな立体感と鮮明さを与える */
+main figure, 
+.img-container,
+.grid article {
+  overflow: hidden;
+  border-radius: 0; /* ミニマル化のため角丸をなくす、または極小にする */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease, filter 0.8s ease;
+  opacity: 0;
+  filter: blur(5px);
+}
+
+main figure.is-visible,
+.img-container.is-visible,
+.grid article.is-visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+main figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.figure-hq {
+  line-height: 0;
+}
+
+.figure-hq img,
+main figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* 比較画像は横長で十分な解像度を確保 */
+.img-screenshot-wide {
+  width: 100%;
+  max-width: min(100%, 480px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3列カード内の画像が潰れないよう最小幅を確保 */
+@media (min-width: 768px) {
+  .price-proof-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .price-proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .price-proof-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

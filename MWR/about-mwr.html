@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MWR Life・Travel Advantageとは｜Blank &amp; Bounds</title>
+  <meta name="description" content="MWR Lifeは150ヶ国で展開する旅のサブスク。業界最先端のAI統合、卸売価格の直接購入、Save to Giveの社会貢献までご紹介します。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { DEFAULT: '#1A2B3C', dark: '#0D151F', light: '#2A3F54' }, gold: { DEFAULT: '#C5A059', dark: '#A8863F' }, cream: '#F9F8F3', link: '#1A2B3C' }, fontFamily: { sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'], display: ['"Playfair Display"', 'serif'], accent: ['"Inter"', '"Manrope"', 'sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .geo-pattern { background-image: linear-gradient(135deg, transparent 48%, rgba(197,160,89,.12) 49%, rgba(197,160,89,.12) 51%, transparent 52%); background-size: 80px 80px; }
+  </style>
+</head>
+<body class="bg-cream text-navy/70 font-sans text-sm md:text-base antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">メインコンテンツへスキップ</a>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform">
+        <span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-gold-dark font-semibold underline underline-offset-4" aria-current="page">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">登録手順</a></li>
+        <li><a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">Contact</a></li>
+        <li><a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">Privacy Policy</a></li>
+        <li><a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">概要書面</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden w-10 h-10 rounded-md border-2 border-navy/20" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="index.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">Top</a></li>
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md bg-white font-semibold text-navy">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">登録手順</a></li>
+        <li class="pt-2"><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="pt-20 md:pt-24">
+
+    <!-- PAGE HERO -->
+    <section class="geo-pattern py-16 md:py-24 border-b border-gold/20 bg-cream/50" aria-labelledby="page-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-8">About MWR Life</p>
+        <h1 id="page-title" class="font-display text-4xl md:text-6xl text-navy-dark mb-10 max-w-4xl mx-auto">MWR Life / Travel Advantage</h1>
+        <p class="text-navy/70 max-w-2xl mx-auto leading-relaxed text-lg font-light">
+          世界を舞台に生きる人々のためのトラベルインフラ。
+          「より賢く、より自由に」最高の旅をデザインする、革新的なプラットフォームです。
+        </p>
+      </div>
+    </section>
+
+    <!-- VISION (Heritage) -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="vision-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="max-w-prose">
+            <h2 id="vision-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-10">Global Infrastructure</h2>
+            <ul class="space-y-8" role="list">
+              <li class="flex gap-6"><span class="font-display text-3xl text-gold italic">01</span><span><strong class="text-navy-dark block mb-2">Heritage</strong> 2013年設立、10年以上にわたり築き上げた信頼と実績。</span></li>
+              <li class="flex gap-6"><span class="font-display text-3xl text-gold italic">02</span><span><strong class="text-navy-dark block mb-2">Network</strong> 世界150ヶ国、50万人以上のユーザーが繋がるグローバルコミュニティ。</span></li>
+              <li class="flex gap-6"><span class="font-display text-3xl text-gold italic">03</span><span><strong class="text-navy-dark block mb-2">Scale</strong> 年商約7500万ドル。成長し続ける旅のプラットフォーム。</span></li>
+            </ul>
+          </div>
+          <figure class="relative group">
+            <img src="assets/IMG_0270-a44b9387-663e-4260-b73f-8a005bc550af.png" alt="Global Network" class="w-full h-auto shadow-2xl transition-all duration-700">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE PROOF BY COUNTRY -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="price-proof-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-3xl mx-auto mb-16">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Price Proof</p>
+          <h2 id="price-proof-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">世界のホテル料金比較</h2>
+          <p class="text-navy/70 leading-relaxed font-light text-lg">実際の予約例で証明。MWR会員価格がいかに安いかをご確認ください。</p>
+        </header>
+
+        <!-- Price Proof by Country -->
+        <div class="max-w-6xl mx-auto">
+          
+          <!-- France -->
+          <div class="mb-16">
+            <h3 class="font-display text-2xl text-navy-dark mb-8 text-center italic">フランス</h3>
+            <button class="md:hidden block mx-auto text-navy/80 text-sm underline mb-4 price-toggle">価格写真を見る</button>
+            <div class="hidden md:grid md:grid-cols-3 md:gap-6 price-content">
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/france-hotel-1.jpg" alt="フランスのホテル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/france-hotel-2.jpg" alt="フランスのホテル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/france-hotel-3.jpg" alt="フランスのホテル3" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Japan -->
+          <div class="mb-16">
+            <h3 class="font-display text-2xl text-navy-dark mb-8 text-center italic">日本</h3>
+            <button class="md:hidden block mx-auto text-navy/80 text-sm underline mb-4 price-toggle">価格写真を見る</button>
+            <div class="hidden md:grid md:grid-cols-3 md:gap-6 price-content">
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/japan-hotel-1.jpg" alt="日本のホテル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/japan-hotel-2.jpg" alt="日本のホテル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/japan-hotel-3.jpg" alt="日本のホテル3" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Egypt -->
+          <div class="mb-16">
+            <h3 class="font-display text-2xl text-navy-dark mb-8 text-center italic">エジプト</h3>
+            <button class="md:hidden block mx-auto text-navy/80 text-sm underline mb-4 price-toggle">価格写真を見る</button>
+            <div class="hidden md:grid md:grid-cols-3 md:gap-6 price-content">
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/egypt-hotel-1.jpg" alt="エジプトのホテル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/egypt-hotel-2.jpg" alt="エジプトのホテル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/egypt-hotel-3.jpg" alt="エジプトのホテル3" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Thailand -->
+          <div class="mb-16">
+            <h3 class="font-display text-2xl text-navy-dark mb-8 text-center italic">タイ</h3>
+            <button class="md:hidden block mx-auto text-navy/80 text-sm underline mb-4 price-toggle">価格写真を見る</button>
+            <div class="hidden md:grid md:grid-cols-3 md:gap-6 price-content">
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/thailand-hotel-1.jpg" alt="タイのホテル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/thailand-hotel-2.jpg" alt="タイのホテル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/thailand-hotel-3.jpg" alt="タイのホテル3" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Chile -->
+          <div class="mb-16">
+            <h3 class="font-display text-2xl text-navy-dark mb-8 text-center italic">チリ</h3>
+            <button class="md:hidden block mx-auto text-navy/80 text-sm underline mb-4 price-toggle">価格写真を見る</button>
+            <div class="hidden md:grid md:grid-cols-3 md:gap-6 price-content">
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/chile-hotel-1.jpg" alt="チリのホテル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/chile-hotel-2.jpg" alt="チリのホテル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+              <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+                <img src="assets/chile-hotel-3.jpg" alt="チリのホテル3" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+              </figure>
+            </div>
+          </div>
+
+          <!-- Lifestyle Description -->
+          <div class="max-w-3xl mx-auto text-center mt-20 mb-16">
+            <p class="text-navy/70 leading-relaxed font-light text-lg">
+              毎月付与されるポイントを活用することで、<br>
+              宿泊費を実質無料にしながら、<br>
+              ホテルを拠点に世界を移動する。<br><br>
+              そんなライフスタイルを<br>
+              現実的な選択肢にしてくれる仕組みがあります。
+            </p>
+          </div>
+
+          <!-- Lifestyle Images -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+              <img src="assets/lifestyle-1.jpg" alt="ライフスタイル1" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+            </figure>
+            <figure class="rounded-lg overflow-hidden shadow-lg border border-gold/10 group">
+              <img src="assets/lifestyle-2.jpg" alt="ライフスタイル2" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUCTURE (Wholesale) -->
+    <section class="py-20 md:py-28 bg-cream/30" aria-labelledby="structure-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-3xl mx-auto mb-16">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Structure</p>
+          <h2 id="structure-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">なぜ、こんなに安く旅行できるのか？</h2>
+          <p class="text-navy leading-relaxed font-light text-lg">広告費や中間マージンを徹底的に削ぎ落とし、卸売価格を会員に直接還元。それが、私たちの誠実さの証明です。</p>
+        </header>
+
+        <div class="max-w-5xl mx-auto mb-16">
+          <figure class="rounded-xl overflow-hidden shadow-2xl border border-gold/20">
+            <img src="assets/IMG_0272-05aca176-02f8-4bf3-abb2-3e9cb9558afd.png" alt="Wholesale Model Comparison" class="w-full h-auto">
+          </figure>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div class="p-12 bg-white border border-navy/5 shadow-sm">
+            <h3 class="font-display text-xl text-navy-dark mb-6 italic">Conventional Model</h3>
+            <p class="text-navy/70 text-sm font-light">巨額の広告費とマーケティングコストが、最終的な宿泊料金を押し上げる不透明な構造。</p>
+          </div>
+          <div class="p-12 bg-white border border-gold/20 shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-gold text-white text-[10px] px-3 py-1 uppercase tracking-widest font-bold">Direct</div>
+            <h3 class="font-display text-xl text-navy-dark mb-6 italic text-gold-dark">Travel Advantage Model</h3>
+            <p class="text-navy/70 text-sm font-light">卸売業者から直接購入。広告費ゼロ、最小限のマージン。すべての余剰価値を会員へ。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST & PARTNERS -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="trust-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-3xl mx-auto mb-16">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Trust & Reliability</p>
+          <h2 id="trust-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">世界が認める信頼のインフラ</h2>
+          <p class="text-navy/70 leading-relaxed font-light text-lg">
+            私たちは、航空・鉄道・クルーズの主要団体と提携し、24時間365日のサポートを提供しています。
+            単なる予約サイトではなく、実在する大手旅行インフラと直接提携している正当なサービスです。
+          </p>
+        </header>
+
+        <div class="max-w-5xl mx-auto">
+          <!-- Partners Grid with Descriptions -->
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="p-8 bg-cream/30 border border-gold/10 rounded-xl flex gap-6 items-start">
+              <div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0 border border-gold/20 p-2">
+                <span class="font-bold text-navy/70 text-xs">IATA</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy-dark mb-2">国際航空運送協会「IATA」</h3>
+                <p class="text-navy/70 leading-relaxed text-lg font-light">世界中の航空会社が加盟する業界団体。認可パートナーとして、安全かつ公正な航空券の提供資格を有しています。</p>
+              </div>
+            </div>
+            <div class="p-8 bg-cream/30 border border-gold/10 rounded-xl flex gap-6 items-start">
+              <div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0 border border-gold/20 p-2">
+                <span class="font-bold text-navy/70 text-xs">SNCF</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy-dark mb-2">フランス国営鉄道「SNCF」</h3>
+                <p class="text-navy/70 leading-relaxed text-lg font-light">ヨーロッパ最大級の鉄道ネットワークを持つ、フランスの国営鉄道会社。公式な提携によりスムーズな手配が可能です。</p>
+              </div>
+            </div>
+            <div class="p-8 bg-cream/30 border border-gold/10 rounded-xl flex gap-6 items-start">
+              <div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0 border border-gold/20 p-2">
+                <span class="font-bold text-navy/70 text-xs text-center leading-tight">FlixBus</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy-dark mb-2">欧州最大級のバス会社「FlixBus」</h3>
+                <p class="text-navy/70 leading-relaxed text-lg font-light">ヨーロッパ全域をカバーする長距離バスサービス。大陸横断の自由な移動を支える強力なインフラです。</p>
+              </div>
+            </div>
+            <div class="p-8 bg-cream/30 border border-gold/10 rounded-xl flex gap-6 items-start">
+              <div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0 border border-gold/20 p-2">
+                <span class="font-bold text-navy/70 text-xs text-center leading-tight">MSC</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy-dark mb-2">世界最大級のクルーズ会社「MSC」</h3>
+                <p class="text-navy/70 leading-relaxed text-lg font-light">世界中のラグジュアリークルーズを展開するグローバルブランド。海の上でも最高の体験を約束します。</p>
+              </div>
+            </div>
+          </div>
+
+          <figure class="rounded-xl overflow-hidden shadow-2xl border border-gold/20">
+            <img src="assets/IMG_0282-d62cd636-4e65-4d46-bba5-bdc3f7e59f8e.png" alt="Global Partners & Support" class="w-full h-auto">
+            <figcaption class="p-6 bg-navy text-white/60 text-center text-sm tracking-widest uppercase">
+              Official Partners: IATA, Ticketmaster, Eurostar, MSC Cruises, Costa, and more.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGACY (Save to Give) -->
+    <section class="py-20 md:py-28 bg-cream/20" aria-labelledby="legacy-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div class="max-w-prose">
+            <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Legacy</p>
+            <h2 id="legacy-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">Save to Give</h2>
+            <p class="text-navy/70 leading-relaxed mb-8 text-lg font-light">
+              自由を享受するだけでなく、世界へ還元する。
+              MWR Lifeのエコシステムには、社会貢献が組み込まれています。
+            </p>
+          </div>
+          <figure class="relative group">
+            <img src="assets/IMG_0283-4f88ab68-3801-4e92-9a59-119c5150e4c1.png" alt="Legacy" class="w-full h-auto opacity-90 transition-opacity">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARN MORE -->
+    <section class="py-24 bg-white border-t border-gold/10" aria-labelledby="learn-more-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Learn More</p>
+        <h2 id="learn-more-heading" class="font-display text-3xl text-navy-dark mb-8 italic">MWRの概要、さらに詳しく知りたい方へ。</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mt-16">
+          <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-solid fa-globe text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">Official Website</p>
+          </a>
+          <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-brands fa-youtube text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">YouTube</p>
+          </a>
+          <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-brands fa-instagram text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">Instagram</p>
+          </a>
+          <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-brands fa-facebook-f text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">Facebook</p>
+          </a>
+          <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-brands fa-tiktok text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">Tiktok</p>
+          </a>
+          <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/20 flex items-center justify-center group-hover:bg-navy group-hover:border-navy transition-all duration-500">
+              <i class="fa-solid fa-plane-departure text-navy group-hover:text-white text-lg"></i>
+            </div>
+            <p class="text-[9px] tracking-[0.2em] uppercase text-navy/70 group-hover:text-navy transition-colors font-bold">Travel Advantage</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY (CTA) -->
+    <section class="py-32 bg-navy text-white text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold mb-8">Next Step</p>
+        <h2 class="font-display text-3xl md:text-5xl mb-12 italic">The Value of Travel</h2>
+        <div class="flex flex-col sm:flex-row gap-8 justify-center">
+          <a href="travel-benefits.html" class="px-12 py-5 bg-gold text-navy-dark font-bold tracking-widest uppercase text-xs hover:bg-gold-light transition-all">旅の価値</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggles = document.querySelectorAll('.price-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          content.classList.toggle('hidden');
+          this.textContent = content.classList.contains('hidden') ? '価格写真を見る' : '閉じる';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

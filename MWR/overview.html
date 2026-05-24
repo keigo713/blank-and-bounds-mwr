@@ -1,0 +1,431 @@
+m<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>概要書面｜Blank &amp; Bounds</title>
+  <meta name="description" content="MWR Lifeのポリシーおよび手続き。独立ライフスタイルアンバサダー契約に関する詳細情報。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { DEFAULT: '#1A2B3C', dark: '#0D151F', light: '#2A3F54' }, gold: { DEFAULT: '#C5A059', dark: '#A8863F' }, cream: '#F9F8F3', link: '#1A2B3C' }, fontFamily: { sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'], display: ['"Playfair Display"', 'serif'], accent: ['"Inter"', '"Manrope"', 'sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .geo-pattern { background-image: linear-gradient(135deg, transparent 48%, rgba(197,160,89,.12) 49%, rgba(197,160,89,.12) 51%, transparent 52%); background-size: 80px 80px; }
+    .prose-policy h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: #1A2B3C; }
+    .prose-policy h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; color: #1A2B3C; }
+    .prose-policy p { margin-bottom: 1rem; line-height: 1.75; }
+    .prose-policy ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .prose-policy li { margin-bottom: 0.5rem; }
+    .prose-policy .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #C5A059; border-bottom: 2px solid #C5A059; padding-bottom: 0.5rem; }
+  </style>
+</head>
+<body class="bg-cream text-navy/70 font-sans text-sm md:text-base antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">メインコンテンツへスキップ</a>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform">
+        <span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">登録手順</a></li>
+        <li><a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">Contact</a></li>
+        <li><a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">Privacy Policy</a></li>
+        <li><a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline" aria-current="page">概要書面</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden w-10 h-10 rounded-md border-2 border-navy/20" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="index.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">Top</a></li>
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">登録手順</a></li>
+        <li class="pt-2"><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded-md bg-white font-semibold text-navy">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="max-w-4xl mx-auto px-4 py-12 md:py-16 prose-policy pt-20 md:pt-24">
+    <h1 class="font-display text-3xl text-navy-dark mb-8">概要書面</h1>
+    <p class="text-navy leading-relaxed mb-8">MWR Lifeのポリシーおよび手続き。独立ライフスタイルアンバサダー契約に関する詳細情報。</p>
+
+    <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-gold/20 mb-8">
+      <p class="text-sm text-navy/60 mb-4">発効日: 2025年1月1日</p>
+      <p class="text-navy leading-relaxed mb-4">MWR LIFE POLICIES AND PROCEDURES<br>MWR ライフ ポリシーおよび手続き</p>
+    </div>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 1 – INTRODUCTION / セクション 1 – 序文</h2>
+      
+      <h3>1.1 – Code of Ethics / 倫理規範</h3>
+      <p>MWR Life（以下「MWR Life」または「当社」という）は、価値に基づいた会社であり、その独立ライフスタイルアンバサダーの質と人格を誇りとしています。以下の指針は、当組織全体にわたり卓越性の統一基準を確保するのに役立ちます。すべての MWR Life 独立ライフスタイルアンバサダーは、会社の名において活動するとき、次の倫理的行動を実践することが期待されています。</p>
+      
+      <ul>
+        <li><strong>A.</strong> MWR Life に関連する事業を行う際に出会うすべての人に対して、私は敬意を払います。</li>
+        <li><strong>B.</strong> 常に私は、自分自身と自分のビジネスを、倫理的、道徳的、合法的、かつ財務的に健全な方法で行います。</li>
+        <li><strong>C.</strong> 私は、MWR Life、MWR Life の役員または従業員、自分自身、または他の独立ライフスタイルアンバサダーの評判を落とすような活動には従事しません。</li>
+        <li><strong>D.</strong> 私は、他の MWR Life 独立ライフスタイルアンバサダーに対して、気をくじくような、または中傷的な主張をしません。すべての MWR Life のビジネス取引において、私は否定的な言葉を使わないようにします。私はいかなる種類の中傷的発言も控えます。</li>
+        <li><strong>E.</strong> 私は、顧客が MWR Life での体験を成功させられるよう、支援と励ましを提供します。私は、ダウンラインに対してフォローアップのサービスと支援を提供することが重要であると理解しています。</li>
+        <li><strong>F.</strong> 私は、MWR Life を通じて利用可能なすべてのボーナス／報酬プランと、そこに示される収入の可能性を正しく提示します。私は、自分自身の収入を他者の成功可能性の指標として使用したり、報酬小切手をマーケティング資料として使用することはできないことを理解しています。さらに、私は、見込みのある独立ライフスタイルアンバサダーに収入開示声明（IDS）のコピーを渡した後にのみ、MWR Life の収入を開示して勧誘できることを理解しています。</li>
+        <li><strong>G.</strong> 私は、現在および将来改訂される可能性のあるすべての MWR Life のポリシーおよび手続きを遵守します。</li>
+      </ul>
+
+      <h3>1.2 – Policies Incorporated Into Independent Lifestyle Ambassador Agreement / 独立ライフスタイルアンバサダー契約に組み込まれるポリシー</h3>
+      <p>これらのポリシーおよび手続き（以下「ポリシー」）は、その現行の形態および MWR Life の単独裁量により改訂された形態において、MWR Life 独立ライフスタイルアンバサダー契約（以下「独立ライフスタイルアンバサダー契約」）に組み込まれ、その不可欠な一部を構成します。本ポリシーにおいて「契約」という用語が使用される場合、それは MWR Life 独立ライフスタイルアンバサダー契約、本ポリシー、および MWR Life 報酬プランを総称して指します。これらの文書は、（すべて現行形態および MWR Life により改訂された形態で）参照により独立ライフスタイルアンバサダー契約に組み込まれます。各独立ライフスタイルアンバサダーは、これらのポリシーを読み、理解し、遵守し、かつ常に最新のバージョンを把握し、そのもとで活動していることを確実にする責任を負います。新しい独立ライフスタイルアンバサダーをスポンサーする際、スポンサーする独立ライフスタイルアンバサダーは、当該新規契約者が独立ライフスタイルアンバサダー契約を締結する前に、これらポリシーおよび手続きの最新バージョンを提供する責任を負います。</p>
+
+      <h3>1.3 – Changes to the Independent Lifestyle Ambassador Agreement, Policies and Procedures, or Compensation Plan / 独立ライフスタイルアンバサダー契約、ポリシーおよび手続き、または報酬プランの変更</h3>
+      <p>MWR Life は、契約およびその MWR Life サービスの価格を、単独かつ完全な裁量で改訂する権利を有します。改訂の通知は、公式 MWR Life 資料に掲載されます。改訂は、公式 MWR Life 資料に公表された時点で有効となります。これには、MWR Life のウェブサイトへの掲載、電子メール配布、MWR Life ニュースレターでの公表、製品同梱資料、その他商業的に合理的な方法を含みますが、これらに限定されません。独立ライフスタイルアンバサダーが MWR Life ビジネスを継続すること、または独立ライフスタイルアンバサダーがボーナスやコミッションを受領することは、すべての改訂を受け入れたものとみなされます。</p>
+
+      <h3>1.4 – Delays / 遅延</h3>
+      <p>MWR Life は、合理的に制御できない状況により業務の履行が商業的に不可能となった場合、義務の履行における遅延や不履行について責任を負いません。これには、ストライキ、労働困難、暴動、戦争、火災、洪水、死亡、供給源の縮小、または政府による命令や布告が含まれますが、これらに限定されません。</p>
+
+      <h3>1.5 – Policies and Provisions Severable / ポリシーおよび条項の可分性</h3>
+      <p>契約の条項が、現行形態または改訂後の形態において、何らかの理由で無効または執行不能と判断された場合、その条項の無効な部分のみが切り離され、残りの条項や規定は完全な効力を保持し、あたかも当該無効または執行不能の条項が契約の一部を構成していなかったかのように解釈されます。</p>
+
+      <h3>1.6 – Waiver / 権利放棄</h3>
+      <p>会社は、契約および事業活動を規律する適用法の遵守を要求する権利を決して放棄しません。MWR Life が契約に基づくいかなる権利や権限を行使しなかったとしても、また独立ライフスタイルアンバサダーに対して契約上の義務や条項の厳格な遵守を要求しなかったとしても、さらに当事者間の慣習や実務が契約条項と異なっていたとしても、それはいずれも MWR Life が契約の正確な遵守を要求する権利を放棄したことを意味しません。MWR Life による権利放棄は、会社の認可された役員による書面によってのみ効力を持ちます。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 2 – BECOMING AN INDEPENDENT LIFESTYLE AMBASSADOR / セクション 2 – 独立ライフスタイルアンバサダーになるには</h2>
+      
+      <h3>2.1 – Requirements to Become an Independent Lifestyle Ambassador / 独立ライフスタイルアンバサダーになるための要件</h3>
+      <p>MWR Life 独立ライフスタイルアンバサダーになるために、各申請者は以下を満たさなければなりません：</p>
+      <ul>
+        <li><strong>A.</strong> 自身の居住管轄区域において成年年齢に達していること。</li>
+        <li><strong>B.</strong> MWR Life が正式に営業を開始している国に居住していること。</li>
+        <li><strong>C.</strong> 有効な納税者番号を持っていること。</li>
+        <li><strong>D.</strong> 適切に記入され署名された独立ライフスタイルアンバサダー契約を、電子的に MWR Life に提出すること。</li>
+      </ul>
+
+      <h3>2.2 – New Independent Lifestyle Ambassador Registration by the Internet and Facsimile / インターネットおよびファクシミリによる新規独立ライフスタイルアンバサダー登録</h3>
+      <p>独立ライフスタイルアンバサダー希望者は、スポンサーのウェブサイトから自己登録を行うことができます。この場合、物理的に署名された独立ライフスタイルアンバサダー契約の代わりに、新しい独立ライフスタイルアンバサダーが独立ライフスタイルアンバサダー契約の諸条件を承諾したことを示す「電子署名」を MWR Life が受け入れることで、契約は成立します。そのような電子署名は、独立ライフスタイルアンバサダーと MWR Life との間の法的拘束力のある契約を構成することにご注意ください。ファクシミリで送信される契約書には、独立ライフスタイルアンバサダー契約の表面と裏面の両方が含まれていなければなりません。</p>
+
+      <h3>2.3 – Independent Lifestyle Ambassador Benefits / 独立ライフスタイルアンバサダーの特典</h3>
+      <p>独立ライフスタイルアンバサダー契約が MWR Life によって承認されると、新しい独立ライフスタイルアンバサダーは、報酬プランおよび独立ライフスタイルアンバサダー契約の特典を利用できるようになります。これらの特典には以下の権利が含まれます：</p>
+      <ul>
+        <li><strong>A.</strong> MWR Life のサービスを販売すること。</li>
+        <li><strong>B.</strong> MWR Life 報酬プランに参加すること（資格がある場合、ボーナスやコミッションを受け取ること）。</li>
+        <li><strong>C.</strong> 他の個人を顧客または独立ライフスタイルアンバサダーとして MWR Life ビジネスにスポンサー登録し、それによって組織を構築し、MWR Life 報酬プランを通じて昇進していくこと。</li>
+        <li><strong>D.</strong> 定期的に MWR Life の出版物やその他の MWR Life からの通知を受け取ること。</li>
+        <li><strong>E.</strong> MWR Life が主催するサポートサービス研修、動機付けおよび表彰イベントに参加すること。</li>
+        <li><strong>F.</strong> MWR Life が独立ライフスタイルアンバサダーのために主催する販促およびインセンティブのコンテストやプログラムに参加すること。</li>
+      </ul>
+
+      <h3>2.4 – Term and Renewal of an MWR Life Business / MWR ライフビジネスの期間と更新</h3>
+      <p>独立ライフスタイルアンバサダーは、自身のビズセンター料金を最新の状態に維持しなければなりません。更新料の未払いにより独立ライフスタイルアンバサダーのビジネスが失効した場合、契約の有効期限から 60 日以内に再度有効化しない限り、独立ライフスタイルアンバサダーは自分のダウンライン組織に対するすべての権利を失います。</p>
+      <p>元独立ライフスタイルアンバサダーが 60 日以内に再度有効化した場合、その独立ライフスタイルアンバサダーは契約失効直前に保持していたランクと地位を再び得ます。</p>
+      <p>契約が失効し、60 日間の猶予期間を経過した独立ライフスタイルアンバサダーは、契約の失効日から 6 か月間、MWR ライフビジネスへの再申請資格を持ちません。MWR Life によって解約された独立ライフスタイルアンバサダーは、解約日から 12 か月間、ビジネスに再申請することはできません。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 3 – INCOME DISCLOSURE POLICY / セクション 3 – 収入開示ポリシー</h2>
+      <p>最良のビジネス慣行を行うために、MWR Life は収入開示声明（以下「IDS」）を作成しました。MWR Life IDS は、MWR Life 独立ライフスタイルアンバサダーが得る収入について、真実で、タイムリーかつ包括的な情報を伝えるよう設計されています。この目的を達成するために、IDS のコピーはすべての見込み独立ライフスタイルアンバサダーに提示されなければなりません。</p>
+      <p>IDS のコピーは、報酬プランが提示または議論されるとき、あるいは収入に関する主張や収益表現が行われるときは常に、見込み独立ライフスタイルアンバサダー（現在の MWR Life 独立ライフスタイルアンバサダー契約の当事者ではない者）に提示されなければなりません。</p>
+      <p>「収入の主張」および／または「収益表現」（総称して「収入主張」という）という用語には以下が含まれます：(1) 平均収入の表明、(2) 非平均収入の表明、(3) 収入範囲の表明、(4) 収入に関する証言、(5) ライフスタイルに関する主張、(6) 仮定的な主張。</p>
+      <p>報酬プランが議論される、または収入に関するいかなる種類の主張が行われる公開会議では、すべての見込み独立ライフスタイルアンバサダーに IDS のコピーを提供しなければなりません。IDS のコピーは、会社のウェブサイト（https://www.mwrlife.com/content/IncomeDisclosure.pdf）から無料で印刷またはダウンロードすることができます。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 4 – ADVERTISING / セクション 4 – 広告</h2>
+      
+      <h3>4.1 – Adherence to the MWR Life Compensation Plan / MWR Life 報酬プランの遵守</h3>
+      <p>独立ライフスタイルアンバサダーは、公式 MWR Life 資料に記載された MWR Life 報酬プランの条件を遵守しなければなりません。独立ライフスタイルアンバサダーは、公式 MWR Life 資料に明記されている場合を除き、他のシステム、プログラム、またはマーケティング手法を通じて、またはそれらと組み合わせて MWR Life の機会を提供してはなりません。独立ライフスタイルアンバサダーは、現在または将来の顧客や独立ライフスタイルアンバサダーに対し、公式 MWR Life 資料に定められたプログラムと異なる方法で MWR Life に参加することを要求または奨励してはなりません。また、MWR Life 独立ライフスタイルアンバサダーとなるために、公式 MWR Life 契約以外のいかなる契約や合意書を締結するよう、現在または将来の顧客や独立ライフスタイルアンバサダーに要求または奨励してはなりません。同様に、独立ライフスタイルアンバサダーは、公式 MWR Life 資料において推奨または必須とされている購入や支払い以外に、いかなる個人または他の法人からの購入や支払いを行うよう、現在または将来の顧客や独立ライフスタイルアンバサダーに要求または奨励してはなりません。</p>
+
+      <h3>4.2 – Use of Sales Aids / 販売補助資料の使用</h3>
+      <p>MWR Life が提供するサービスおよびビジネス機会の両方を促進するために、独立ライフスタイルアンバサダーは MWR Life が作成した販売補助資料および支援資料を使用しなければなりません。MWR Life 独立ライフスタイルアンバサダーが独自に販売補助資料や販促資料（インターネット広告を含む）を作成した場合、たとえ独立ライフスタイルアンバサダーに善意があったとしても、MWR Life のビジネスに影響を与えるいくつもの法律や規制に意図せず違反する可能性があります。これらの違反は比較的少数であっても、すべての独立ライフスタイルアンバサダーにとって MWR Life のビジネス機会を危険にさらす可能性があります。したがって、独立ライフスタイルアンバサダーは、使用する前に、すべての書面による販売補助資料、販促資料、広告、ウェブサイトおよびその他の文書を会社に提出し、会社の承認を得なければなりません。独立ライフスタイルアンバサダーがその資料を使用するための特定の書面による承認を受けない限り、その申請は却下されたものとみなされます。すべての独立ライフスタイルアンバサダーは、MWR Life およびその推奨パートナーによって提供されるサービスプランの良好な評判を守り、推進しなければなりません。MWR Life、MWR Life のビジネス機会、報酬プラン、そして MWR Life のサービスのマーケティングおよびプロモーションは、公益と一致するものでなければならず、無礼、欺瞞、誤解を招く行為、非倫理的または不道徳な行為や慣行はすべて避けなければなりません。</p>
+
+      <h3>4.3 – Intellectual Property / 知的財産</h3>
+      <p>MWR Life は、MWR Life 独立ライフスタイルアンバサダーを含むいかなる人物によるものであっても、MWR Life の事前の書面による許可なしに、企業が作成・承認した販売補助資料以外で、その商号、商標、デザイン、またはシンボルを使用することを許可しません。さらに、いかなる独立ライフスタイルアンバサダーも、当該独立ライフスタイルアンバサダー本人の事前の書面による同意なしに、他の独立ライフスタイルアンバサダーの名前、写真または肖像、または声を、いかなる方法でも使用、出版、複製、広告、販売、または表示することはできません。この同意は、使用前に MWR Life のコンプライアンス部門に記録されていなければなりません。</p>
+
+      <h3>4.4 – Web Policy / ウェブポリシー</h3>
+      <p>独立ライフスタイルアンバサダーが自分のビジネスを促進するためにインターネットのウェブページを利用したい場合、会社が承認したサービスのみを通じて行うことができます。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 5 – OPERATING AN MWR LIFE BUSINESS / セクション 5 – MWR Life ビジネスの運営</h2>
+      
+      <h3>5.1 – Business Entities / 事業体</h3>
+      <p>法人、パートナーシップ、または信託（本セクションでは総称して「事業体」と呼ぶ）は、MWR Life 独立ライフスタイルアンバサダー申請書および契約書に、設立証明書、組織定款、パートナーシップ契約書、または信託文書（これらを総称して「事業体文書」と呼ぶ）を添付して MWR Life に提出することで、MWR Life 独立ライフスタイルアンバサダーに申請することができます。</p>
+      <p>MWR Life ビジネスは、同一スポンサーの下で、個人からパートナーシップ、法人、または信託へ、またはある事業体の形態から別の形態へとその地位を変更することができます。そのためには、独立ライフスタイルアンバサダーが MWR Life に事業体文書を提出しなければなりません。独立ライフスタイルアンバサダー申請書には、すべての株主、パートナー、または受託者の署名が必要です。事業体の構成員は、MWR Life に対するいかなる負債やその他の義務についても連帯して責任を負います。</p>
+
+      <h3>5.1.1 – Changes to a Business Entity / 事業体の変更</h3>
+      <p>各独立ライフスタイルアンバサダーは、自身の MWR Life ビジネスの運営に使用している事業体の種類に変更があった場合や、ビジネスの共同経営者を追加または削除する場合には、直ちに MWR Life に通知しなければなりません。</p>
+      <p>MWR Life ビジネスは、同一スポンサーの下で、個人からパートナーシップ、法人、または信託へ、またはある事業体の形態から別の形態へとその地位を変更することができます。独立ライフスタイルアンバサダー契約書には、すべての株主、パートナー、または受託者の署名が必要です。事業体の構成員は、MWR Life に対するいかなる負債やその他の義務についても連帯して責任を負います。</p>
+
+      <h3>5.1.2 – Change of Sponsor / スポンサーの変更</h3>
+      <p>すべてのマーケティング組織の健全性を維持し、独立ライフスタイルアンバサダーの努力を尊重するため、MWR Life はスポンサーの変更を厳しく制限しています。スポンサーの変更が許可されるのは、独立ライフスタイルアンバサダーが自分のアカウントを解約し、最後に活動中のライフスタイルアンバサダーであった時点から 6 か月以上が経過している場合に限られます。</p>
+      <p>独立ライフスタイルアンバサダーが、自身のアカウントを解約し、当社の返金ポリシーに従って登録日から 14 日以内に登録料の返金を受けた場合、直ちに別のスポンサーに登録することはできません。ネットワークマーケティングの健全性と倫理を維持するため、新しいスポンサーに再登録するには 6 か月以上待たなければなりません。</p>
+
+      <h3>5.2 – Unauthorized Claims and Action / 不正な主張および行為</h3>
+      
+      <h3>5.2.1 – Indemnification / 免責補償</h3>
+      <p>独立ライフスタイルアンバサダーは、MWR Life サービスおよび報酬プランに関して、公式 MWR Life 資料に明示されていないすべての口頭および／または書面による発言について、全面的に責任を負います。</p>
+      <p>独立ライフスタイルアンバサダーは、不正な表明や行為の結果として MWR Life に生じた、判決、民事罰金、返金、弁護士費用、裁判費用、または失われたビジネスを含む一切の責任から、MWR Life を補償し、免責することに同意します。</p>
+      <p>この規定は、独立ライフスタイルアンバサダー契約が終了した後も有効に存続します。</p>
+
+      <h3>5.2.2 – Endorsements of MWR Life Services / MWR Life サービスの保証</h3>
+      <p>MWR Life が提供するいかなるサービスに関しても、公式 MWR Life 資料に記載されたもの以外の主張を行ってはなりません。</p>
+
+      <h3>5.3 – Conflicts / 競合</h3>
+      
+      <h3>5.3.1 – Non-Solicitations / 勧誘禁止</h3>
+      <p>本契約の有効期間中、独立ライフスタイルアンバサダーは、他のネットワークマーケティングビジネスのために、他の MWR Life 独立ライフスタイルアンバサダーまたは顧客を直接的または間接的に勧誘することはできません。</p>
+      <p>独立ライフスタイルアンバサダー契約の解約後、1 暦年間の期間にわたり、元独立ライフスタイルアンバサダーは、MWR Life の独立ライフスタイルアンバサダーまたは顧客を他のネットワークマーケティングビジネスに勧誘してはなりません。</p>
+
+      <h3>5.3.2 – Sale of Competing Goods or Services / 競合商品またはサービスの販売</h3>
+      <p>本契約期間中およびその後 6 か月間、独立ライフスタイルアンバサダーは、MWR Life 以外の競合プログラムを販売、または販売しようとしてはなりません。MWR Life サービスと同一の一般的カテゴリーに属するプログラム、製品、サービス、または直接販売の機会はすべて競合すると見なされます。</p>
+
+      <h3>5.3.3 – Targeting Other Direct Sellers / 他の直接販売者を対象とする行為</h3>
+      <p>独立ライフスタイルアンバサダーが、他の直接販売会社のメンバーに対して MWR Life サービスを販売または配布するよう勧誘または誘惑を行った場合、その直接販売会社から訴えられるリスクを負うことになります。</p>
+      <p>独立ライフスタイルアンバサダーが、その販売員や顧客に対する不適切なリクルート活動に関与したとされて訴訟、仲裁、または調停を起こされた場合、MWR Life は独立ライフスタイルアンバサダーの弁護費用や法的費用を一切負担せず、また判決、裁定、または和解に対して補償することもありません。</p>
+
+      <h3>5.3.4 – Privacy and Confidentiality / プライバシーと機密保持</h3>
+      <p>すべての独立ライフスタイルアンバサダーは、独立ライフスタイルアンバサダーおよび顧客情報に関して、会社のプライバシーポリシーを遵守することが求められます。</p>
+
+      <h3>5.3.5 – The Data Management Rule / データ管理規則</h3>
+      <p>データ管理規則は、MWR Life およびすべての独立ライフスタイルアンバサダーの利益のために、スポンサーシップライン（LOS）を保護することを目的としています。LOS 情報とは、MWR Life によってまとめられた情報で、MWR Life ビジネス内のスポンサーシップの具体的な構成全体または一部を開示または関連付けるものであり、独立ライフスタイルアンバサダーのリスト、スポンサーシップツリー、そこから生成されるすべての独立ライフスタイルアンバサダー情報を含み、現在および将来の形式を含みます。</p>
+      <p>MWR Life の LOS は、商業的に有利で、独自かつ専有的な営業秘密（専有情報）であり、専有的かつ機密のものとして保持され、営業秘密として扱われます。</p>
+      <p>MWR Life は、専有情報の唯一の所有者であり、それは MWR Life および独立ライフスタイルアンバサダーによって多大な時間、労力、資源を費やして導き出され、編纂され、構成され、維持されています。</p>
+      <p>この規則に基づき、独立ライフスタイルアンバサダーは、これらの規約および手順に基づいて自らのビジネスを円滑に行うために必要な範囲でのみ、専有情報を使用する個人的で、非独占的で、譲渡不可能かつ取消可能な権利を MWR Life から付与されます。</p>
+      <p>MWR Life が、専有情報の機密性または価値を保護するために必要であると合理的に判断した場合、会社は独立ライフスタイルアンバサダーに対して、その拒否または取消の理由を明示した合理的な通知を行うことで、この権利を拒否または取り消す権利を留保します。</p>
+      <p>すべての独立ライフスタイルアンバサダーは、専有情報を厳格に機密として保持し、専有情報を保護し、その機密性を維持するために、あらゆる合理的な手段と適切な措置を講じなければなりません。</p>
+
+      <h3>5.4 – Cross Sponsoring / クロススポンサー</h3>
+      <p>実際の、または試みられたクロスグループスポンサーは厳しく禁止されます。「クロスグループスポンサー」とは、すでに MWR Life に現行の顧客番号または独立ライフスタイルアンバサダー契約を有している、もしくは過去 6 か月以内にそのような契約を有していた個人または事業体を、直接的または間接的に登録させることを指します。</p>
+      <p>配偶者や親族の名前、商号、DBA（Doing Business As、別名）、仮名、法人、パートナーシップ、信託、連邦税識別番号、または架空の識別番号を利用してこのポリシーを回避することは禁止されています。</p>
+      <p>ただし、このポリシーは「MWR Life ビジネスの販売、譲渡、または割り当て」セクションに従った MWR Life ビジネスの譲渡を禁止するものではありません。</p>
+
+      <h3>5.5 – Governmental Approval or Endorsement / 政府による承認または支持</h3>
+      <p>連邦政府や州の規制機関、またはその職員はいかなる直接販売会社やネットワークマーケティング会社、またはそのプログラムも承認または支持しません。したがって、独立ライフスタイルアンバサダーは、MWR Life またはその報酬プランが政府機関によって「承認」「支持」またはその他の形で認可されていると表明、または示唆してはなりません。</p>
+
+      <h3>5.6 – Identification / 身元確認</h3>
+      <p>すべての独立ライフスタイルアンバサダーは、独立ライフスタイルアンバサダー契約書に記載するか、または会社からの要求に応じて、自身の社会保障番号、連邦雇用者識別番号、または政府発行の身分証明番号を MWR Life に提供する必要があります。</p>
+      <p>登録時に、会社は独立ライフスタイルアンバサダーを識別するための固有の独立ライフスタイルアンバサダー識別番号を付与します。この番号は、注文の処理やコミッションおよびボーナスの追跡に使用されます。</p>
+
+      <h3>5.7 – Income Taxes / 所得税</h3>
+      <p>各独立ライフスタイルアンバサダーは、独立ライフスタイルアンバサダーとして得た収入に対して、地方税、州税、および連邦税を納付する責任を負います。</p>
+
+      <h3>5.8 – Independent Contractor Status / 独立請負業者の地位</h3>
+      <p>あなたは独立請負業者です。あなたは会社の代表者、従業員、パートナー、またはジョイントベンチャーの一員ではありません。あなたは独立ライフスタイルアンバサダー以外の立場を名乗ることはできません。あなたには MWR Life をいかなる義務にも拘束する権限はありません。</p>
+      <p>あなたは自営業税、連邦所得税、および法律で要求されるその他の税を自ら納付する責任を負います。あなたは、自身の独立した MWR Life ビジネス、または MWR Life のサービスやビジネス機会の取得、受領、保有、販売、配布、または広告に関連する連邦法、州法、地方条例、ならびに会社の規則や規定を遵守しなければなりません。</p>
+      <p>独立ライフスタイルアンバサダーは、電話に出る際に「MWR Life」「MWR Life Incorporated」と名乗ったり、発信者が MWR Life 本社に電話をかけたと誤解するような応答をしてはなりません。独立ライフスタイルアンバサダーは、自分が MWR Life の独立ライフスタイルアンバサダーであると示すことのみが許されます。</p>
+      <p>したがって、独立ライフスタイルアンバサダーの MWR Life ビジネスに関連する、または関連するすべての書簡や名刺には、独立ライフスタイルアンバサダーの氏名の後に「Independent Lifestyle Ambassador（独立ライフスタイルアンバサダー）」という表記を含めなければなりません。</p>
+
+      <h3>5.9 – Bonus Buying / ボーナス購入</h3>
+      <p>ボーナスを受け取る、またはランクを達成することのみを目的としてサービスを契約することは禁止されています。独立ライフスタイルアンバサダーが購入するすべてのサービスは、明確に個人使用を目的としたものでなければなりません。</p>
+
+      <h3>5.10 – Stacking / スタッキング</h3>
+      <p>スタッキングとは、コミッションを発生させたり、ダウンラインの独立ライフスタイルアンバサダーを不正に昇格させたりするために、MWR Life の報酬システムやマーケティングプランを不正に操作することを指します。</p>
+      <p>スタッキングの一例として、スポンサーが、顧客を知らない、または何の関係も持たない非アクティブなダウンライン参加者の下に新しい参加者を配置し、不正にコミッション資格を得させる場合があります。</p>
+      <p>スタッキングの別の例は、昇格を発生させるために、ダウンライン組織内に独立ライフスタイルアンバサダーを操作的に配置することです。</p>
+      <p>スタッキングは非倫理的で受け入れられない行為であり、直接関与していると認められたすべての者の独立ライフスタイルアンバサダー資格を終了させることを含む処罰の対象となります。</p>
+
+      <h3>5.11 – One MWR Life Business per Independent Lifestyle Ambassador / 独立ライフスタイルアンバサダー1 人につき 1 つの MWR Life ビジネス</h3>
+      <p>独立ライフスタイルアンバサダーは、個人事業主、パートナー、株主、受託者、または受益者として、1 つの MWR Life ビジネスのみを運営または所有（法的または衡平的に）することができます。</p>
+      <p>いかなる個人も、複数の MWR Life ビジネスを所有、運営、またはそこから報酬を受け取ることはできません。</p>
+      <p>同一世帯の個人は、それぞれ独自に別の MWR Life ビジネスに参加したり、権益を持ったりすることができます。</p>
+
+      <h3>5.12 – Succession / 事業承継</h3>
+      <p>独立ライフスタイルアンバサダーが死亡または判断能力を喪失した場合、そのビジネスは指定された相続人に承継されることがあります。適切な法的文書を会社に提出し、移転が正しく行われるようにしなければなりません。</p>
+      <p>MWR Life ビジネスが遺言その他の遺贈手続きによって承継される場合、受益者は、以下の条件を満たす限り、故人である独立ライフスタイルアンバサダーのマーケティング組織から発生するすべてのボーナスおよびコミッションを受け取る権利を得ます。後継者は以下を行わなければなりません：</p>
+      <ul>
+        <li>独立ライフスタイルアンバサダー契約を締結すること。</li>
+        <li>契約の条項および規定を遵守すること。</li>
+        <li>故人の独立ライフスタイルアンバサダーのランク／ステータスに必要なすべての資格を満たすこと。</li>
+        <li>すべてのボーナスおよびコミッション小切手が送付される「登録住所」を MWR Life に提供すること。本セクションに基づいて承継された MWR Life ビジネスのボーナスおよびコミッション小切手は、後継者全員に対して一括で共同名義の小切手として支払われます。</li>
+      </ul>
+
+      <h3>5.13 – Sale, Transfer, or Assignment of an MWR Life Business / MWR Life ビジネスの売却・譲渡・譲与</h3>
+      <p>MWR Life ビジネスは私的に所有され、独立して運営されるビジネスですが、その売却、譲渡、または譲与には一定の制限があり、MWR Life から事前に書面による承認を得なければなりません。MWR Life は、そのような取引を承認するか、条件付きで承認するか、または却下するかについて、唯一かつ絶対的な裁量権を有します。</p>
+      <p>独立ライフスタイルアンバサダーが自分の MWR Life ビジネスを売却しようとする場合、以下の条件を満たさなければなりません：</p>
+      <ul>
+        <li><strong>A.</strong> 既存のスポンサーシップラインの保護を常に維持し、MWR Life ビジネスがそのスポンサーシップライン内で継続的に運営されることを保証すること。</li>
+        <li><strong>B.</strong> 売却、譲渡、または譲与が最終的に成立し、MWR Life によって承認される前に、売却する独立ライフスタイルアンバサダーが MWR Life に対して負っている債務はすべて解消されなければなりません。</li>
+        <li><strong>C.</strong> 管理移転手数料として 995 ドルが課されます。</li>
+      </ul>
+      <p>MWR Life ビジネスを売却する前に、売却する独立ライフスタイルアンバサダーは、売却の意向を MWR Life のコンプライアンス部門に通知しなければなりません。MWR Life ビジネスの売却または譲渡によって、スポンサーシップラインに変更が生じることは認められません。独立ライフスタイルアンバサダーは、自分のビジネスの一部を売却、譲渡、または譲与することはできず、地位全体を完全に売却しなければなりません。</p>
+      <p>MWR Life は、すべての条件が満たされているかどうかに関わらず、売却、譲渡、または譲与の申請を承認、条件付き承認、または拒否する権利を、独自かつ絶対的な裁量により留保します。</p>
+
+      <h3>5.14 – Separation of an MWR Life Business / MWR Life ビジネスの分離</h3>
+      <p>MWR Life の独立ライフスタイルアンバサダーは、夫婦によるパートナーシップ、通常のパートナーシップ、法人、または信託として MWR Life ビジネスを運営する場合があります。結婚が離婚によって終了した場合や、法人、パートナーシップ、信託（以下、総称して「事業体」といいます）が解散した場合には、スポンサーシップラインの上位または下位の他のビジネスの利益や収益に悪影響を与えないように、ビジネスの分離または分割が行われるよう手配しなければなりません。</p>
+      <p>分離する当事者が、他の独立ライフスタイルアンバサダーおよび会社の利益を適切かつ迅速に保護するための対応を行わない場合、MWR Life は独立ライフスタイルアンバサダー契約を強制的に終了させます。</p>
+      <p>離婚または事業体の解散の過程において、当事者は以下のいずれかの運営方法を採用しなければなりません：</p>
+      <ul>
+        <li><strong>A.</strong> 当事者の一方は、他の当事者の同意を得たうえで、譲渡書に基づき MWR Life ビジネスを運営することができます。この譲渡書により、事業を放棄する配偶者、株主、パートナー、または受託者は、MWR Life が他方の配偶者または事業を放棄しない株主、パートナー、または受託者と直接かつ単独で取引を行うことを承認するものとします。</li>
+        <li><strong>B.</strong> 当事者は「従来通りの業務」ベースで MWR Life ビジネスを共同で継続運営することができます。この場合、MWR Life から支払われるすべての報酬は、離婚申請または解散手続き開始以前の現状に従って支払われます。</li>
+      </ul>
+      <p>これは、当事者が上記の形式に合意しない場合のデフォルトの手続きです。会社は、当該当事者の書面による許可と署名がない限り、独立ライフスタイルアンバサダーのアカウントからその当事者を削除することはありません。</p>
+      <p>いかなる場合でも、離婚する配偶者または解散する事業体のダウンライン組織が分割されることはありません。いかなる場合でも、MWR Life が離婚する配偶者や解散する事業体のメンバー間でコミッションやボーナスの小切手を分割することはありません。</p>
+      <p>MWR Life は、1 つのダウンライン組織のみを認め、コミッションサイクルごとに 1 つの MWR Life ビジネスにつき 1 枚のコミッション小切手のみを発行します。コミッション小切手は常に同一の個人または事業体に対して発行されます。</p>
+      <p>会社が定める適時性に従って、離婚または解散手続きにおけるコミッションやビジネスの所有権に関する紛争を当事者が解決できない場合、独立ライフスタイルアンバサダー契約は強制的に終了されます。</p>
+
+      <h3>5.15 – Sponsoring / スポンサー活動</h3>
+      <p>適格で、かつ良好な状態にあるすべての独立ライフスタイルアンバサダーは、他者を MWR Life にスポンサーし、登録させる権利を有します。各見込み客または独立ライフスタイルアンバサダーは、自分自身のスポンサーを最終的に選択する権利を持ちます。</p>
+      <p>2 人の独立ライフスタイルアンバサダーが同一の新規独立ライフスタイルアンバサダーまたは顧客のスポンサーであると主張した場合、会社は最初に受理した申請を有効なものとみなします。</p>
+
+      <h3>5.16 – Customers That Become Independent Lifestyle Ambassadors / 顧客から独立ライフスタイルアンバサダーになる場合</h3>
+      <p>既存の顧客が独立ライフスタイルアンバサダーになることを選択した場合、資格要件やコミッションの目的で自分自身の顧客として扱うオプションを持つことができます。</p>
+
+      <h3>5.17 – Recognition / 表彰</h3>
+      <p>ランクの資格を得たライフスタイルアンバサダーは、会社の単独の裁量により、MWR Life の公式ソーシャルメディアページ、ウェブサイト、その他の媒体で表彰されます。ライフスタイルアンバサダーになることによって、そのように表彰されることに対して会社に完全な許可を与えるものとします。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 6 – RESPONSIBILITIES OF INDEPENDENT LIFESTYLE AMBASSADORS / セクション 6 – 独立ライフスタイルアンバサダーの責任</h2>
+      
+      <h3>6.1 – Change of Address, Telephone, Email Address / 住所・電話番号・メールアドレスの変更</h3>
+      <p>迅速な連絡、支援資料およびコミッションの確実な配達を保証するために、MWR Life の記録が最新であることは極めて重要です。引っ越しやメールアドレスの変更を予定している独立ライフスタイルアンバサダーは、その情報を更新するために会社へ通知しなければなりません。</p>
+
+      <h3>6.2 – Sponsoring Independent Lifestyle Ambassador Responsibilities / スポンサーである独立ライフスタイルアンバサダーの責任</h3>
+      <p>他の独立ライフスタイルアンバサダーを MWR Life にスポンサーする独立ライフスタイルアンバサダーは、そのダウンラインが適切に MWR Life ビジネスを運営できるように、誠実な支援とトレーニングを行う責務を負います。独立ライフスタイルアンバサダーは、新たに独立ライフスタイルアンバサダーになる申請者が契約書に署名する前に、最新の「規約と手続き」「収入開示声明」「報酬プラン」を提供しなければなりません。</p>
+
+      <h3>6.3 – Non-Disparagement / 中傷禁止</h3>
+      <p>独立ライフスタイルアンバサダーは、MWR Life、他の MWR Life 独立ライフスタイルアンバサダー、MWR Life のサービス、報酬プラン、または MWR Life の所有者、取締役会メンバー、役員、従業員について、中傷、軽視、または否定的な発言をしてはなりません。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 7 – BILLING / セクション 7 – 請求</h2>
+      
+      <h3>7.1 – Automatic Billing / 自動請求</h3>
+      <p>会員資格は、登録されている支払方法を使用して毎月自動的に更新されます。独立ライフスタイルアンバサダーに未払いのコミッション残高がある場合、翌月の料金はその未払い残高から差し引かれます。</p>
+
+      <h3>7.2 – Currency / 通貨</h3>
+      <p>MWR Life は、カード保有者の銀行の所在国や地域など、さまざまな要因に応じて、米ドル（USD）、ユーロ（EUR）、またはその他の通貨で請求する場合があります。料金は共通の通貨で表示されますが、実際の請求は、当時の銀行間レートに最大 3％の換算手数料を加えた等価の別通貨で行われる場合があります。カード保有者の銀行が追加手数料を課す場合があります。MWR Life は、そのような手数料の返金または補償について責任を負いません。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 8 – COMMISSIONS / セクション 8 – コミッション</h2>
+      
+      <h3>8.1 – Commission Qualifications / コミッションの資格要件</h3>
+      <p>MWR Life の報酬プランに記載されたコミッションを受け取る資格を得るには、独立ライフスタイルアンバサダーは「資格者（Qualified）」であり、良好な状態を維持し、独立ライフスタイルアンバサダー契約および本規約に従っていなければなりません。獲得したコミッションは、20 ドル以上が累積された時点で支払われます。</p>
+
+      <h3>8.2 – Bonus Buying Prohibited / ボーナス購入の禁止</h3>
+      <p>ボーナス購入は厳格に、かつ完全に禁止されています。ボーナス購入には以下が含まれます：(a) 当該個人や法人の承認や独立ライフスタイルアンバサダー契約の締結なしに、その個人や法人を登録すること。(b) 個人または法人を独立ライフスタイルアンバサダーや顧客として不正に登録すること。(c) 実在しない個人や法人を独立ライフスタイルアンバサダーまたは顧客として登録、または登録を試みること（いわゆる「幽霊（phantoms）」）。(d) コミッションやボーナスの資格を得るために、他の独立ライフスタイルアンバサダーや顧客の代わりに、または他の独立ライフスタイルアンバサダーや顧客の ID 番号を使用して MWR Life のサービスを購入すること。(e) ボーナス資格を得るために、自分自身のクレジットカードを使用して独立ライフスタイルアンバサダーや顧客を登録すること。(f) ボーナス資格を得るために、独立性のない（実質的に本人に関連する）顧客を登録すること。(g) エンドユーザー消費者による真正な製品またはサービスの購入によらず、ランク昇格、インセンティブ、賞、コミッション、またはボーナスの資格を得るための、その他いかなる仕組みや策略も含まれます。</p>
+
+      <h3>8.3 – Administration Fees / 管理手数料</h3>
+      <p>コミッションから 1.95 ドルの管理手数料が差し引かれます。支払いが返却された場合、独立ライフスタイルアンバサダーには 5 ドルの返金手数料が課されます。</p>
+
+      <h3>8.4 – Commission Payment Delay / コミッション支払いの遅延</h3>
+      <p>以下のいずれかの理由によるコミッションの損失または支払い遅延について、MWR Life は責任を負いません：(i) 契約が MWR Life に提出されていない、または不完全、不正確に記入されている、あるいは署名されていない場合。(ii) 住所変更の通知が不適切に行われた場合。(iii) 古い様式の書類が MWR Life に提出された場合。(iv) 顧客情報の処理に問題がある場合。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 9 – DISPUTE RESOLUTION AND DISCIPLINARY PROCEEDINGS / セクション 9 – 紛争解決および懲戒手続き</h2>
+      
+      <h3>9.1 – Disciplinary Sanctions / 懲戒処分</h3>
+      <p>契約、本規約の違反、忠実義務などの慣習法上の義務の違反、違法、不正、欺瞞的、または非倫理的な事業行為、あるいは独立ライフスタイルアンバサダーによる行為または不作為であって、会社の単独の裁量により、その評判や信用を損なう可能性のあるものは、MWR Life の裁量により、以下の是正措置の 1 つ以上を招くことがあります：書面による警告または注意の発行、独立ライフスタイルアンバサダーに即時の是正措置を求めること、罰金の課徴、1 回以上のボーナスおよびコミッション小切手を受け取る権利の喪失、独立ライフスタイルアンバサダーのボーナスおよびコミッションの全部または一部を差し止めること、該当者の独立ライフスタイルアンバサダー契約を停止すること、違反者の独立ライフスタイルアンバサダー契約を強制的に終了すること、その他の措置。</p>
+
+      <h3>9.2 – Mediation / 調停</h3>
+      <p>仲裁を開始する前に、当事者は誠意をもって会合し、本契約から生じる、またはこれに関連するいかなる紛争も、法的拘束力のない調停を通じて解決を試みなければなりません。当事者双方が受け入れ可能とする人物 1 名を調停者として任命します。調停者の報酬および費用、ならびに調停の開催および実施にかかる費用は、当事者間で均等に分担されます。各当事者は、共有費用および予想される費用の自分の分を、調停の少なくとも 10 日前に支払わなければなりません。各当事者は、調停の実施および参加に関連する自己の弁護士費用、経費、および個人的費用を負担します。調停はパナマ共和国パナマ市で行われ、2 営業日を超えてはなりません。</p>
+
+      <h3>9.3 – Arbitration / 仲裁</h3>
+      <p>調停が不成功に終わった場合、本契約から生じる、またはこれに関連する、あるいはその違反に関するあらゆる紛争や請求は、アメリカ仲裁協会がその商事仲裁規則に基づき管理する秘密仲裁によって解決され、仲裁人によって下された裁定に基づく判決は、管轄権を有するいかなる裁判所にも登録することができます。独立ライフスタイルアンバサダーは、陪審による裁判や、いかなる裁判所における審理の権利もすべて放棄します。すべての仲裁手続きは、パナマ共和国パナマ市で行われます。仲裁人は 1 名であり、ビジネス法取引に専門知識を有する弁護士で、できれば直接販売業界に精通した弁護士が「パナマ仲裁法」に従って選任されます。仲裁に参加する各当事者は、法的費用や申立手数料を含む、仲裁にかかる自己の費用と経費を負担する責任があります。仲裁人の決定は最終的かつ当事者を拘束するものであり、必要に応じて、管轄権を有する裁判所において判決に変換される場合があります。この仲裁に関する合意は、本契約の終了または満了後も有効に存続します。</p>
+
+      <h3>9.4 – Governing Law, Jurisdiction, and Venue / 準拠法、管轄権および裁判地</h3>
+      <p>仲裁の対象とならない事項についての管轄および裁判地は、専らパナマ共和国パナマ市に属します。本契約に関連する、または本契約から生じるその他すべての事項は、パナマ共和国の法律に従うものとします。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 10 – EFFECT OF CANCELLATION / セクション 10 – 契約解除の効果</h2>
+      
+      <h3>10.1 – Effect of Cancellation and Termination / 解約および終了の効果</h3>
+      <p>独立ライフスタイルアンバサダーが資格要件を満たし、本契約およびこれらのポリシーの条項を遵守している限り、MWR Life は当該独立ライフスタイルアンバサダーに対し、報酬プランに従ってコミッションを支払います。独立ライフスタイルアンバサダーのボーナスおよびコミッションは、販売の創出および販売に関連するすべての活動（ダウンライン組織の構築を含むがこれに限らない）に対する唯一かつ全体の対価を構成します。</p>
+      <p>独立ライフスタイルアンバサダーが契約を継続しなかった場合、または不活動により解約された場合、あるいは自発的もしくは非自発的な解約（終了）となった場合（これらを総称して「解約」という）、元独立ライフスタイルアンバサダーは、彼または彼女が運営していたダウンライン組織、またはその組織によって生じた販売からのコミッションやボーナスについて、いかなる権利、権原、請求権、または利益も有しません。独立ライフスタイルアンバサダーは、ダウンラインに関して有していた一切の権利（財産権を含むがこれに限られない）を放棄します。独立ライフスタイルアンバサダー契約が解約された後、元独立ライフスタイルアンバサダーは、自らを MWR Life の独立ライフスタイルアンバサダーとして称することはできず、また MWR Life の製品やサービスを販売する権利を持ちません。独立ライフスタイルアンバサダー契約が解約された者は、解約前に活動していた最後の完全な支払い期間分のコミッションおよびボーナスのみを受け取ることができます（強制解約に先立つ調査の間に差し止められた金額を差し引いた額）。</p>
+      <p>MWR Life の参加者は、理由を問わず、いつでも解約する権利を有します。解約は、会社の本社住所宛てに書面で提出するか、または support@mwrlife.com 宛てに電子メールで送信しなければなりません。入会から 14 日以内、または更新料が処理されてから 3 日以内に当社が解約の申請を受け取った場合、返金が行われます。電子メールによる場合、顧客登録されているメールアドレスから送信しなければなりません。書面による場合には、独立ライフスタイルアンバサダーの署名、印字された氏名、住所、およびそのアンバサダーのポジションに関連付けられたメールアドレスを含める必要があります。入会から 30 日以内に解約する独立ライフスタイルアンバサダーは、それまでに発生したコミッションを放棄することに同意したものとみなされます。解約後に、新しいプロモーションを利用する目的だけで再入会することは、厳しく禁止されています。独立ライフスタイルアンバサダーは、再入会を許可されるまでに 6 か月間待たなければなりません。</p>
+
+      <h3>10.2 – Non-Renewal / 非更新</h3>
+      <p>独立ライフスタイルアンバサダーは、Biz Center 料金を支払わないことにより、自発的に独立ライフスタイルアンバサダー契約を終了させることができます。Biz Center 料金を未払いの場合、独立ライフスタイルアンバサダーには 60 日間の猶予期間が与えられ、この間に支払いを行えば契約を維持することができます。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="section-title">SECTION 11 – DEFINITIONS / セクション 11 – 定義</h2>
+      
+      <p><strong>AGREEMENT（契約）：</strong>会社と各独立ライフスタイルアンバサダーとの間の契約を指します。これには、独立ライフスタイルアンバサダー契約、MWR Life ポリシー＆手続き、および MWR Life 報酬プランが含まれます。これらはすべて、現行の形態および MWR Life が独自の裁量で改訂したものを意味します。これらの文書は総称して「契約」と呼ばれます。</p>
+      
+      <p><strong>CANCEL（解約）：</strong>独立ライフスタイルアンバサダーのビジネスの終了を意味します。解約は、自発的、非自発的、または非活動状態が 60 日間続いた後の非更新によって行われる場合があります。</p>
+      
+      <p><strong>COMPENSATION PLAN（報酬プラン）：</strong>独立ライフスタイルアンバサダーがどのようにしてコミッションやボーナスを獲得できるかを説明するための指針および関連文献を指します。</p>
+      
+      <p><strong>CUSTOMER（顧客）：</strong>MWR Life のサービスを購入するが、ビジネスの構築やサービスの販売には関与しない顧客を指します。</p>
+      
+      <p><strong>INDEPENDENT LIFESTYLE AMBASSADOR（独立ライフスタイルアンバサダー）：</strong>サービスプランを購入し、販売を生み出し、ビジネス構築に伴うコミッションを得る個人を指します。</p>
+      
+      <p><strong>LINE OF SPONSORSHIP（スポンサーライン）：</strong>MWR Life が作成するレポートで、独立ライフスタイルアンバサダーの身元、販売情報、各アンバサダー組織の登録活動に関する重要なデータを提供します。このレポートには、MWR Life に専有される機密情報および営業秘密が含まれます。</p>
+      
+      <p><strong>ORGANIZATION（組織）：</strong>特定の独立ライフスタイルアンバサダーの下に配置された顧客および独立ライフスタイルアンバサダーを指します。</p>
+      
+      <p><strong>RECRUIT（リクルート／勧誘）：</strong>MWR Life の利益相反ポリシーにおいて、「リクルート」とは、直接的、間接的、または第三者を通じて、他の MWR Life 独立ライフスタイルアンバサダーや顧客を勧誘、登録、奨励、またはあらゆる方法で影響を与えて、別のマルチレベルマーケティング、ネットワークマーケティング、または直接販売の機会に参加させる実際の、あるいは試みられた行為を意味します。</p>
+      
+      <p><strong>SPONSOR（スポンサー）：</strong>顧客または他の独立ライフスタイルアンバサダーを会社に登録させ、独立ライフスタイルアンバサダー契約にスポンサーとして記載されている独立ライフスタイルアンバサダーを指します。他者を登録し、彼らを独立ライフスタイルアンバサダーとして育成する行為を「スポンサリング」と呼びます。</p>
+      
+      <p><strong>UPLINE（アップライン）：</strong>特定の独立ライフスタイルアンバサダーの上位に位置し、会社まで続くスポンサーシップの系列に属する独立ライフスタイルアンバサダーを指します。これは、任意の特定の独立ライフスタイルアンバサダーを会社に結びつけるスポンサーの系列です。</p>
+    </section>
+
+    <div class="mt-12 pt-8 border-t border-gold/20">
+      <p class="text-sm text-navy/60">この概要書面は、MWR Lifeの公式ポリシーおよび手続きの要約です。詳細については、公式MWR Life資料をご参照ください。</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

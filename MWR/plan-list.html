@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プラン一覧｜MWR Life｜Blank &amp; Bounds</title>
+  <meta name="description" content="MWR Lifeのプラン一覧：Standard、Premium、Turboプランの詳細と料金をご紹介します。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { DEFAULT: '#1A2B3C', dark: '#0D151F', light: '#2A3F54' }, gold: { DEFAULT: '#C5A059', dark: '#A8863F' }, cream: '#F9F8F3', link: '#1A2B3C' }, fontFamily: { sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'], display: ['"Playfair Display"', 'serif'], accent: ['"Inter"', '"Manrope"', 'sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .geo-pattern { background-image: linear-gradient(135deg, transparent 48%, rgba(197,160,89,.12) 49%, rgba(197,160,89,.12) 51%, transparent 52%); background-size: 80px 80px; }
+  </style>
+</head>
+<body class="bg-cream text-navy font-sans text-sm md:text-base antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">メインコンテンツへスキップ</a>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform">
+        <span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-gold-dark font-semibold underline underline-offset-4" aria-current="page">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-navy hover:text-gold-dark hover:underline underline-offset-4">登録手順</a></li>
+        <li><a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">Contact</a></li>
+        <li><a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">Privacy Policy</a></li>
+        <li><a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">概要書面</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden w-10 h-10 rounded-md border-2 border-navy/20" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="index.html" class="block px-3 py-2 rounded-md hover:bg-white">Top</a></li>
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md hover:bg-white">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md bg-white font-semibold">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md hover:bg-white">登録手順</a></li>
+        <li><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded-md hover:bg-white">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded-md hover:bg-white">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="pt-20 md:pt-24">
+
+    <!-- HERO -->
+    <section class="geo-pattern py-16 md:py-32 border-b border-gold/20" aria-labelledby="page-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Plan List</p>
+        <h1 id="page-title" class="font-display text-3xl md:text-6xl text-navy-dark mb-10 max-w-4xl mx-auto italic">プラン一覧</h1>
+        <p class="text-navy/70 max-w-2xl mx-auto leading-relaxed text-lg font-light">
+          MWR Lifeのプランをご紹介します。
+          あなたのライフスタイルに合わせたプランを選択してください。
+        </p>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="py-24 bg-white" aria-labelledby="plans-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto mb-20">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Membership Plans</p>
+          <h2 id="plans-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">
+            Choose Your Plan
+          </h2>
+          <p class="text-navy/70 leading-relaxed text-lg font-light">
+            2つのプランから、あなたに最適なプランを選択してください。
+          </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- ELITE Plan -->
+          <div class="bg-cream rounded-2xl p-8 border border-gold/10 hover:border-gold/30 transition-all">
+            <div class="text-center mb-8">
+              <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-4">ELITE</p>
+              <h3 class="font-display text-2xl text-navy-dark mb-4">エリート会員</h3>
+              <p class="text-sm text-navy/70 mb-4">初期費用を抑えた始めやすいプラン</p>
+              <p class="text-4xl font-bold text-navy-dark mb-2">$338.97<span class="text-lg font-normal text-navy/70">（初期費用）</span></p>
+              <p class="text-sm text-navy/70">月額料金：$119.97<br>年会費　：$99</p>
+            </div>
+            <ul class="space-y-4 mb-8 text-navy/70">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>毎月＄120分のポイントを付与</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>12ヵ月積立で100％ポイント使用可能</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>登録後＄120分のポイントプレゼント</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>登録時に50ゲストパス</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>毎月20ゲストパスを獲得</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>ホテルを安く利用できる</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- TURBO Plan -->
+          <div class="bg-navy rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy-dark px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">人気</div>
+            <div class="text-center mb-8">
+              <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold mb-4">TURBO</p>
+              <h3 class="font-display text-2xl text-white mb-4">ターボ会員</h3>
+              <p class="text-sm text-white/70 mb-4">ポイントが2倍積み上がるお得なプラン</p>
+              <p class="text-4xl font-bold text-white mb-2">$588.94<span class="text-lg font-normal text-white/70">（初期費用）</span></p>
+              <p class="text-sm text-white/70">月額料金：$119.97<br>年会費：$99</p>
+            </div>
+            <ul class="space-y-4 mb-8 text-white/80">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>毎月＄240分のポイントを付与</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>12ヵ月積立で100％ポイント使用可能</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>登録後＄490分のポイントプレゼント</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>登録時に1500のゲストパス</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>毎月20ゲストパスを獲得</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-gold mt-1"></i>
+                <span>ホテルをさらに特価で利用できる</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto mt-16 text-center">
+        <p class="text-navy/70 leading-relaxed text-lg font-light">
+          「まずは試してみたい」という方は、<br>
+          お問い合わせフォームよりご連絡ください。<br><br>
+          無料で利用できるゲストパスを送付いたします。
+        </p>
+      </div>
+    </section>
+
+    <!-- COOLING OFF -->
+    <section class="py-24 bg-cream" aria-labelledby="cooling-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Cooling Off</p>
+        <h2 id="cooling-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8 italic">クーリングオフ制度</h2>
+        <p class="text-navy/70 leading-relaxed text-lg font-light mb-8">
+          20日以内なら全額返金保証付き
+        </p>
+        <p class="text-navy/70 leading-relaxed text-lg font-light mb-12">
+          ＊予約をしていないこと
+        </p>
+        <div class="max-w-2xl mx-auto">
+          <img src="assets/cooling-off.jpg" alt="クーリングオフ制度説明" class="w-full md:w-3/4 h-auto object-cover rounded-lg border border-gold/20 mx-auto" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE MONTHLY FEE -->
+    <section class="py-24 bg-white" aria-labelledby="free-fee-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto mb-16">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Free Monthly Fee</p>
+          <h2 id="free-fee-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8 italic">
+            月額費を無料化できる仕組み
+          </h2>
+        </header>
+        <div class="prose prose-lg max-w-none text-navy/70 leading-relaxed font-light text-center">
+          <p class="mb-8">
+            MWRには、旅を楽しむだけでなく、一定条件を満たすことで月額費を無料化できる仕組みがあります。
+          </p>
+          <p class="mb-8">
+            例えば、
+          </p>
+          <ul class="space-y-4 mb-8 inline-block text-left">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check text-gold mt-1"></i>
+              <span>直接3名をご紹介</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-gold-dark font-semibold">または</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check text-gold mt-1"></i>
+              <span>直接2名をご紹介し、さらにチーム内で1名が紹介</span>
+            </li>
+          </ul>
+          <p class="mb-8">
+            することで、シルバーランクへ到達し、月額費を実質無料にすることが可能です。
+          </p>
+          <p class="mb-8">
+            さらに、その他にも複数の報酬プランが存在します。
+          </p>
+          <p class="mb-8">
+            また、「紹介や発信に自信がない」「どう活用すればいいかわからない」という方向けに、招待制コミュニティ『Borderless Club』も運営しています。
+          </p>
+          <p class="mb-8">
+          </p>
+          <p class="mb-8">
+          </p>
+          <p class="mb-8">
+            続きは「ビジネス」へ
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 bg-navy text-white text-center">
+      <div class="max-w-xl mx-auto px-4">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold mb-8">Next Step</p>
+        <h2 class="font-display text-3xl md:text-5xl mb-12 italic">Business</h2>
+        <a href="business.html" class="inline-flex items-center justify-center px-12 py-5 bg-gold text-navy-dark font-bold tracking-[0.2em] uppercase text-xs hover:bg-gold-light transition-all">ビジネス</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

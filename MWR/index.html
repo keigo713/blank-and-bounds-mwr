@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blank &amp; Bounds｜世界を移動できる収入を作る</title>
+  <meta name="description" content="停滞した白昼夢から抜け出し、旅を通じて人生をバウンドさせる。場所や時間に縛られない収入源の構築と、MWR Lifeが叶えるライフスタイルを紹介します。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#1A2B3C',
+              dark: '#0D151F',
+              light: '#2A3F54',
+            },
+            gold: {
+              DEFAULT: '#C5A059',
+              dark: '#A8863F',
+              light: '#D4B87A',
+            },
+            cream: '#F9F8F3',
+            link: '#1A2B3C',
+            error: '#B91C1C',
+          },
+          fontFamily: {
+            sans: ['"Manrope"', '"Inter"', '"Noto Sans JP"', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+            accent: ['"Inter"', '"Manrope"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    .geo-pattern {
+      background-image:
+        linear-gradient(135deg, transparent 48%, rgba(197, 160, 89, 0.12) 49%, rgba(197, 160, 89, 0.12) 51%, transparent 52%),
+        linear-gradient(45deg, transparent 48%, rgba(197, 160, 89, 0.08) 49%, rgba(197, 160, 89, 0.08) 51%, transparent 52%);
+      background-size: 80px 80px, 120px 120px;
+    }
+    .input-error { border-color: #B91C1C !important; box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15); }
+    .input-error:focus { outline-color: #B91C1C; }
+  </style>
+</head>
+
+<body class="bg-cream text-navy font-sans text-sm md:text-base antialiased">
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-white focus:rounded-md">
+    メインコンテンツへスキップ
+  </a>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gold/20">
+    <nav class="max-w-6xl mx-auto pl-1 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between h-16 md:h-20" aria-label="メインナビゲーション">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/favicon.png" alt="Blank & Bounds Logo" class="w-10 h-10 rounded-full border border-gold/40 bg-white object-cover group-hover:scale-105 transition-transform">
+        <span><span class="block font-display text-lg md:text-xl text-navy">Blank &amp; Bounds</span><span class="block font-accent text-[10px] md:text-xs tracking-[0.2em] text-navy/80 uppercase">Go Beyond. Live Borderless.</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-5 text-sm font-medium ml-auto">
+        <li><a href="about-mwr.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">プラン一覧</a></li>
+        <li><a href="business.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">ビジネス</a></li>
+        <li><a href="register-guide.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">登録手順</a></li>
+        <li>
+          <a href="index.html#contact" class="inline-flex items-center gap-2 px-4 py-2.5 bg-navy text-white rounded-sm border border-navy hover:bg-navy-light transition-all">
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="privacy.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="overview.html" class="text-navy hover:text-gold-dark transition-colors underline-offset-4 hover:underline">概要書面</a>
+        </li>
+      </ul>
+      <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border-2 border-navy/20 text-navy hover:border-gold focus:outline-none focus:ring-2 focus:ring-gold" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
+        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gold/20 bg-cream" aria-label="モバイルメニュー">
+      <ul class="max-w-6xl mx-auto px-4 py-4 space-y-1 text-sm font-medium">
+        <li><a href="about-mwr.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">MWRの概要</a></li>
+        <li><a href="travel-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">旅の価値</a></li>
+        <li><a href="member-benefits.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">メンバー特典</a></li>
+        <li><a href="plan-list.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">プラン一覧</a></li>
+        <li><a href="business.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">ビジネス</a></li>
+        <li><a href="register-guide.html" class="block px-3 py-2 rounded-md text-navy hover:bg-white">登録手順</a></li>
+        <li class="pt-2"><a href="index.html#contact" class="block px-3 py-2 rounded-md bg-navy text-white">Contact</a></li>
+        <li><a href="privacy.html" class="block px-3 py-2 rounded-md hover:bg-white">Privacy Policy</a></li>
+        <li><a href="overview.html" class="block px-3 py-2 rounded-md hover:bg-white">概要書面</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="pt-20 md:pt-24">
+
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-navy" aria-labelledby="hero-heading">
+      <!-- Background Image with Slow Zoom -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?q=80&w=2070&auto=format&fit=crop" alt="Luxury Travel" class="w-full h-full object-cover opacity-50 animate-slow-zoom">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy/60 via-transparent to-navy/80"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 w-full text-center lg:text-left">
+        <div class="max-w-3xl mx-auto lg:mx-0">
+          <p class="inline-block font-accent text-xs md:text-sm tracking-[0.4em] uppercase text-gold mb-8 reveal-text">
+            LIVE BEYOND LOCATION
+          </p>
+          <h1 id="hero-heading" class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-white mb-10 reveal-text" style="animation-delay: 0.2s;">
+            Travel as a Lifestyle
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 font-light tracking-wide mb-12 max-w-xl mx-auto lg:mx-0 reveal-text" style="animation-delay: 0.4s;">
+            時間や場所に縛られず、旅するように生きる。<br class="hidden sm:block"><br class="hidden sm:block">
+            旅を"消費"ではなく、<br class="hidden sm:block">
+            仕組みとして最適化することで、<br class="hidden sm:block">
+            ホテルや移動コストも大きく変わっていく。<br class="hidden sm:block"><br class="hidden sm:block">
+            「旅をするために働く」のではなく、<br class="hidden sm:block">
+            "旅できる人生"を設計する。
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6 reveal-text" style="animation-delay: 0.6s;">
+            <a href="#contact" class="inline-flex items-center justify-center px-10 py-4 bg-gold text-navy-dark font-medium tracking-widest uppercase text-xs rounded-sm hover:bg-gold-light transition-all shadow-xl">
+              Contact
+            </a>
+            <a href="about-mwr.html" class="inline-flex items-center justify-center px-10 py-4 border border-white/30 text-white font-medium tracking-widest uppercase text-xs rounded-sm hover:bg-white/10 transition-all backdrop-blur-sm">
+              MWRの概要
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4 opacity-60">
+        <span class="font-accent text-[10px] tracking-[0.3em] uppercase text-white/80">Scroll</span>
+        <div class="w-px h-12 bg-gradient-to-b from-white to-transparent"></div>
+      </div>
+    </section>
+
+    <!-- ========== MWRの概要 (Philosophy) ========== -->
+    <section id="philosophy" class="bg-white" aria-labelledby="philosophy-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center max-w-2xl mx-auto mb-24">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">MWR Life</p>
+          <h2 id="philosophy-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">
+            Ownership & Freedom
+          </h2>
+          <p class="text-navy/70 leading-relaxed text-lg font-light">
+            年収の多寡よりも、その収入が「どのように生まれているか」が自由の質を決めます。
+            時間を切り売りするフローから、仕組みを所有するストックへ。
+          </p>
+        </header>
+
+        <!-- Comparison Cards with Luxury Styling -->
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+          <article class="p-10 border border-navy/5 bg-cream/30">
+            <div class="mb-10 opacity-40">
+              <i class="fa-solid fa-hourglass-start text-4xl"></i>
+            </div>
+            <h3 class="font-display text-2xl text-navy-dark mb-6 italic">Flow Lifestyle</h3>
+            <p class="text-navy/60 text-sm mb-8">時間を売り、その場で稼ぐ。止まれば消える収入。</p>
+            <ul class="space-y-4 text-sm text-navy/80 font-light">
+              <li class="flex items-center gap-4 border-b border-navy/5 pb-4"><span>場所と時間に拘束される労働</span></li>
+              <li class="flex items-center gap-4 border-b border-navy/5 pb-4"><span>スケールするほど奪われる自由</span></li>
+              <li class="flex items-center gap-4"><span>積み上がらない一時的な対価</span></li>
+            </ul>
+          </article>
+
+          <article class="p-10 pt-12 border border-gold/20 bg-white shadow-2xl relative">
+            <div class="absolute top-2 right-2 bg-gold px-4 py-1 text-[10px] tracking-widest uppercase text-white font-bold">
+              The Standard
+            </div>
+            <div class="mb-10 text-gold">
+              <i class="fa-solid fa-layer-group text-4xl"></i>
+            </div>
+            <h3 class="font-display text-2xl text-navy-dark mb-6 italic">Stock Lifestyle</h3>
+            <p class="text-navy/60 text-sm mb-8">仕組みを所有し、自由を資産化する生き方。</p>
+            <ul class="space-y-4 text-sm text-navy/80 font-light">
+              <li class="flex items-center gap-4 border-b border-navy/5 pb-4"><i class="fa-solid fa-check text-gold text-[10px]"></i><span>自分がいなくても回り続けるStructure</span></li>
+              <li class="flex items-center gap-4 border-b border-navy/5 pb-4"><i class="fa-solid fa-check text-gold text-[10px]"></i><span>世界を移動しながら機能するDesign</span></li>
+              <li class="flex items-center gap-4"><i class="fa-solid fa-check text-gold text-[10px]"></i><span>次世代へレバレッジをかけるOwnership</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STRUCTURE (Income) ========== -->
+    <section id="structure" class="bg-white py-24 md:py-32" aria-labelledby="structure-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div class="max-w-prose">
+            <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Structure</p>
+            <h2 id="structure-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8 italic">The Ownership Model.</h2>
+            <p class="text-navy/70 leading-relaxed text-lg font-light mb-8">
+              私たちが提案するのは、単なる「稼ぎ方」ではありません。
+              旅という体験を資産に変え、レバレッジを効かせた「仕組みの所有（Ownership）」です。
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-6 group">
+                <span class="w-12 h-px bg-gold group-hover:w-20 transition-all duration-500"></span>
+                <span class="text-sm tracking-widest uppercase text-navy/60">Asset-based Revenue</span>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <span class="w-12 h-px bg-gold group-hover:w-20 transition-all duration-500"></span>
+                <span class="text-sm tracking-widest uppercase text-navy/60">Global Leverage</span>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <span class="w-12 h-px bg-gold group-hover:w-20 transition-all duration-500"></span>
+                <span class="text-sm tracking-widest uppercase text-navy/60">Time Freedom Design</span>
+              </div>
+            </div>
+          </div>
+          <figure class="relative overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Structure" class="w-full h-auto opacity-80 group-hover:scale-110 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LIFESTYLE (Benefit) ========== -->
+    <section id="lifestyle" class="bg-cream geo-pattern" aria-labelledby="lifestyle-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="max-w-3xl mb-24">
+          <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">Lifestyle</p>
+          <h2 id="lifestyle-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8">
+            旅するように、生きる。
+          </h2>
+          <p class="text-navy/70 leading-relaxed text-lg font-light">
+            贅沢な旅は、単なる消費ではありません。
+            自分というOSを書き換え、人生に余白（Blank）と跳躍（Bounds）を生むための投資です。
+          </p>
+        </header>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          <article class="group">
+            <div class="aspect-[4/5] overflow-hidden mb-8">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" alt="Luxury Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+            </div>
+            <h3 class="font-display text-xl text-navy-dark mb-4 italic">時間や場所に縛られない</h3>
+            <p class="text-navy/60 text-sm leading-relaxed font-light">
+              働く場所を選ばず、世界中どこでも仕事ができる。移動そのものが日常の一部になる。
+            </p>
+          </article>
+
+          <article class="group">
+            <div class="aspect-[4/5] overflow-hidden mb-8">
+              <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop" alt="Stock Income" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+            </div>
+            <h3 class="font-display text-xl text-navy-dark mb-4 italic">動いていない時間も積み上がる</h3>
+            <p class="text-navy/60 text-sm leading-relaxed font-light">
+              自分が働いていない時間にも、ストック型の構造が積み上がっていく。自由を資産化する生き方。
+            </p>
+          </article>
+
+          <article class="group">
+            <div class="aspect-[4/5] overflow-hidden mb-8">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop" alt="Mobile Office" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+            </div>
+            <h3 class="font-display text-xl text-navy-dark mb-4 italic">スマホ1つで世界がオフィスになる</h3>
+            <p class="text-navy/60 text-sm leading-relaxed font-light">
+              大きな設備も、固定オフィスも必要ない。<br>最小限の装備で、最大限の自由を。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FIRST STEP ========== -->
+    <section class="py-24 bg-cream/30 border-b border-gold/10" aria-labelledby="first-step-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold-dark mb-6">First Step</p>
+        <h2 id="first-step-heading" class="font-display text-3xl md:text-5xl text-navy-dark mb-8 italic">About MWR Life</h2>
+        <a href="about-mwr.html" class="inline-flex items-center justify-center px-12 py-5 bg-navy text-white font-bold tracking-[0.2em] uppercase text-xs hover:bg-navy-light transition-all shadow-lg">
+          MWRの概要
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT (CTA) ========== -->
+    <section id="contact" class="bg-navy text-white" aria-labelledby="contact-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+          <!-- Left: copy -->
+          <div class="max-w-prose">
+            <p class="font-accent text-xs tracking-[0.4em] uppercase text-gold mb-8">Contact</p>
+            <h2 id="contact-heading" class="font-display text-3xl md:text-5xl text-white mb-10 leading-tight">
+              次の目的地を、<br>“いつか”で終わらせない。
+            </h2>
+            <p class="text-white/60 leading-relaxed mb-6 text-lg font-light">
+              MWR Lifeに少しでも興味がある方へ。<br><br>
+              ゲストパスの発行、<br>
+              招待URLのご案内、<br>
+              メンバー特典やビジネスについてなど、<br>
+              お気軽にお問い合わせください。
+            </p>
+            <p class="text-white/60 leading-relaxed mb-6 text-lg font-light">
+              X（Twitter）DMやメールからの<br>
+              直接連絡も可能です。
+            </p>
+            <p class="text-white/60 leading-relaxed mb-6 text-lg font-light">
+              X : <a href="https://x.com/mego_business" target="_blank" rel="noopener noreferrer" class="text-gold underline underline-offset-4 hover:text-gold-light">@mego_business</a><br>
+              Mail : <a href="mailto:keiworldlife@gmail.com" class="text-gold underline underline-offset-4 hover:text-gold-light">keiworldlife@gmail.com</a>
+            </p>
+            <p class="text-white/40 leading-relaxed mb-12 text-sm">
+              ※ご参加前に、必ず<a href="overview.html" class="text-gold underline underline-offset-4 hover:text-gold-light">概要書面</a>をご確認ください。
+            </p>
+          </div>
+
+          <!-- Right: form -->
+          <div class="bg-white p-10 shadow-2xl text-navy">
+            <form id="lead-form" class="space-y-8" novalidate action="javascript:void(0);">
+              <div>
+                <label for="name" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                  class="w-full px-0 py-4 text-base text-navy bg-transparent border-b border-navy/10 focus:outline-none focus:border-gold transition-colors placeholder:text-navy/20"
+                >
+                <p id="name-error" class="hidden text-red-500 text-xs mt-2"></p>
+              </div>
+
+              <div>
+                <label for="email" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="email@example.com"
+                  class="w-full px-0 py-4 text-base text-navy bg-transparent border-b border-navy/10 focus:outline-none focus:border-gold transition-colors placeholder:text-navy/20"
+                >
+                <p id="email-error" class="hidden text-red-500 text-xs mt-2"><span></span></p>
+              </div>
+
+              <div>
+                <label for="interest" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
+                  Inquiry Content
+                </label>
+                <select
+                  id="interest"
+                  name="interest"
+                  class="w-full px-0 py-4 text-base text-navy bg-transparent border-b border-navy/10 focus:outline-none focus:border-gold transition-colors"
+                >
+                  <option value="invitation">招待URLの受け取り</option>
+                  <option value="guestpass">ゲストパスの発行</option>
+                  <option value="other">質問</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
+                  Message (Optional)
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  placeholder="How can we help you?"
+                  class="w-full px-0 py-4 text-base text-navy bg-transparent border-b border-navy/10 focus:outline-none focus:border-gold transition-colors placeholder:text-navy/20"
+                ></textarea>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                  class="mt-1 w-4 h-4 accent-navy"
+                >
+                <label for="privacy" class="text-sm text-navy/70">
+                  <a href="privacy.html" class="text-gold underline underline-offset-4 hover:text-gold-dark">Privacy Policy</a>に同意する
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center px-10 py-5 bg-navy text-white font-bold tracking-[0.2em] uppercase text-xs hover:bg-navy-light transition-all shadow-lg"
+              >
+                Send Request
+              </button>
+            </form>
+
+            <div id="form-success" class="hidden text-center py-12" role="status">
+              <p class="font-display text-2xl italic text-navy-dark mb-4">Thank you.</p>
+              <p class="text-navy/60 text-sm font-light">お問い合わせを承りました。<br>順次ご連絡させていただきます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-dark text-white/80 py-14 border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <p class="font-display text-lg text-white">Blank &amp; Bounds</p>
+      <div class="flex items-center gap-8 flex-wrap">
+        <a href="https://mwrlife.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-globe text-lg"></i>
+          <span class="sr-only">Official Website</span>
+        </a>
+        <a href="https://youtube.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-youtube text-lg"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mwrlife" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/17hnxSswZT" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-facebook-f text-lg"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@mwrlifeofficial" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-brands fa-tiktok text-lg"></i>
+          <span class="sr-only">Tiktok</span>
+        </a>
+        <a href="https://www.traveladvantage.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">
+          <i class="fa-solid fa-plane-departure text-lg"></i>
+          <span class="sr-only">Travel Advantage</span>
+        </a>
+      </div>
+      <p class="text-xs text-white/60">Independent Lifestyle Ambassador Site | &copy; <span id="year"></span> Blank &amp; Bounds. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    console.log('Form script loaded');
+
+    // Initialize EmailJS
+    (function(){
+      emailjs.init("8sEdUOgmoEDLbawTf");
+      console.log('EmailJS initialized');
+    })();
+
+    const form = document.getElementById('lead-form');
+    const formSuccess = document.getElementById('form-success');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const interestInput = document.getElementById('interest');
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const emailErrorText = emailError.querySelector('span');
+    const privacyCheckbox = document.getElementById('privacy');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    console.log('Form elements:', form, nameInput, emailInput);
+
+    function validateEmail(value) {
+      if (!value.trim()) return 'メールアドレスを入力してください。';
+      if (!value.includes('@')) return 'メールアドレスに「@」が含まれていません。正しい形式で入力してください。';
+      const parts = value.split('@');
+      if (parts.length !== 2 || !parts[0] || !parts[1]) return '「@」の前後に文字が必要です。例：name@example.com';
+      if (!parts[1].includes('.')) return 'ドメイン部分が不完全です。例：name@example.com';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) return '有効なメールアドレス形式で入力してください。';
+      return '';
+    }
+
+    function showError(input, errorEl, message) {
+      input.classList.add('input-error');
+      input.setAttribute('aria-invalid', 'true');
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+    }
+
+    function clearError(input, errorEl) {
+      input.classList.remove('input-error');
+      input.setAttribute('aria-invalid', 'false');
+      errorEl.classList.add('hidden');
+      if (errorEl === emailError) emailErrorText.textContent = '';
+      else errorEl.textContent = '';
+    }
+
+    nameInput.addEventListener('blur', () => {
+      if (!nameInput.value.trim()) {
+        showError(nameInput, nameError, 'お名前を入力してください。');
+      } else {
+        clearError(nameInput, nameError);
+      }
+    });
+
+    emailInput.addEventListener('blur', () => {
+      const msg = validateEmail(emailInput.value);
+      if (msg) {
+        emailErrorText.textContent = msg;
+        showError(emailInput, emailError, msg);
+        emailError.classList.remove('hidden');
+      } else {
+        clearError(emailInput, emailError);
+      }
+    });
+
+    emailInput.addEventListener('input', () => {
+      if (emailInput.classList.contains('input-error')) {
+        const msg = validateEmail(emailInput.value);
+        if (!msg) clearError(emailInput, emailError);
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      console.log('Form submit triggered');
+      e.preventDefault();
+      let valid = true;
+
+      if (!nameInput.value.trim()) {
+        showError(nameInput, nameError, 'お名前を入力してください。');
+        valid = false;
+      } else {
+        clearError(nameInput, nameError);
+      }
+
+      const emailMsg = validateEmail(emailInput.value);
+      if (emailMsg) {
+        emailErrorText.textContent = emailMsg;
+        showError(emailInput, emailError, emailMsg);
+        emailError.classList.remove('hidden');
+        valid = false;
+      } else {
+        clearError(emailInput, emailError);
+      }
+
+      if (!privacyCheckbox.checked) {
+        alert('Privacy Policyに同意してください。');
+        valid = false;
+      }
+
+      if (!valid) {
+        const firstInvalid = !nameInput.value.trim() ? nameInput : emailInput;
+        firstInvalid.focus();
+        return;
+      }
+
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+
+      // Get interest label
+      const interestLabel = interestInput.options[interestInput.selectedIndex].text;
+      
+      // Prepare message with interest
+      const fullMessage = `お問い合わせ内容: ${interestLabel}\n\nメッセージ:\n${messageInput.value || 'なし'}`;
+
+      // Send email via EmailJS
+      const templateParams = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: fullMessage
+      };
+
+      emailjs.send('MWR Life Blank & Bounds', 'template_u3c9lff', templateParams)
+        .then(function() {
+          // Success
+          form.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+        }, function(error) {
+          // Error
+          console.error('EmailJS error:', error);
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Request';
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+          alert('送信に失敗しました。もう一度お試しいただくか、X（Twitter）DMやメールで直接ご連絡ください。');
+        });
+    });
+  </script>
+
+</body>
+</html>
