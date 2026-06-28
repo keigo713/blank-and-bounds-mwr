@@ -352,21 +352,6 @@
           <div class="bg-white p-10 shadow-2xl text-navy">
             <form id="lead-form" class="space-y-8" novalidate action="javascript:void(0);">
               <div>
-                <label for="name" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="Your Name"
-                  class="w-full px-0 py-4 text-base text-navy bg-transparent border-b border-navy/10 focus:outline-none focus:border-gold transition-colors placeholder:text-navy/20"
-                >
-                <p id="name-error" class="hidden text-red-500 text-xs mt-2"></p>
-              </div>
-
-              <div>
                 <label for="email" class="block text-[10px] tracking-[0.2em] uppercase font-bold text-navy/40 mb-3">
                   Email Address
                 </label>
@@ -489,17 +474,15 @@
 
     const form = document.getElementById('lead-form');
     const formSuccess = document.getElementById('form-success');
-    const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
     const interestInput = document.getElementById('interest');
-    const nameError = document.getElementById('name-error');
     const emailError = document.getElementById('email-error');
     const emailErrorText = emailError.querySelector('span');
     const privacyCheckbox = document.getElementById('privacy');
     const submitButton = form.querySelector('button[type="submit"]');
 
-    console.log('Form elements:', form, nameInput, emailInput);
+    console.log('Form elements:', form, emailInput);
 
     function validateEmail(value) {
       if (!value.trim()) return 'メールアドレスを入力してください。';
@@ -527,14 +510,6 @@
       else errorEl.textContent = '';
     }
 
-    nameInput.addEventListener('blur', () => {
-      if (!nameInput.value.trim()) {
-        showError(nameInput, nameError, 'お名前を入力してください。');
-      } else {
-        clearError(nameInput, nameError);
-      }
-    });
-
     emailInput.addEventListener('blur', () => {
       const msg = validateEmail(emailInput.value);
       if (msg) {
@@ -558,13 +533,6 @@
       e.preventDefault();
       let valid = true;
 
-      if (!nameInput.value.trim()) {
-        showError(nameInput, nameError, 'お名前を入力してください。');
-        valid = false;
-      } else {
-        clearError(nameInput, nameError);
-      }
-
       const emailMsg = validateEmail(emailInput.value);
       if (emailMsg) {
         emailErrorText.textContent = emailMsg;
@@ -581,8 +549,7 @@
       }
 
       if (!valid) {
-        const firstInvalid = !nameInput.value.trim() ? nameInput : emailInput;
-        firstInvalid.focus();
+        emailInput.focus();
         return;
       }
 
@@ -599,7 +566,6 @@
 
       // Send email via EmailJS
       const templateParams = {
-        name: nameInput.value,
         email: emailInput.value,
         message: fullMessage
       };
